@@ -2,6 +2,7 @@ import { Card } from "@/modules/ui/components/Card";
 import { Header } from "@/modules/ui/components/Header";
 import { Hero } from "@/modules/ui/components/Hero";
 import { IconList } from "@/modules/ui/components/IconList";
+import { ImageAndText } from "@/modules/ui/components/ImageAndText";
 
 export default function Home() {
   return (
@@ -48,18 +49,7 @@ export default function Home() {
           }
         />
       </div>
-      <div className="container mx-auto px-4 py-10">
-        <Card
-          image={{
-            url: "/list.png",
-            alt: "desktop with a laptop",
-          }}
-          title={"Noteworthy technology acquisitions 2021"}
-          text={
-            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          }
-        />
-      </div>
+      <ImageAndText />
     </main>
   );
 }
