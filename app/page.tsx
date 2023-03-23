@@ -1,91 +1,65 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Card } from "@/modules/ui/components/Card";
+import { Header } from "@/modules/ui/components/Header";
+import { Hero } from "@/modules/ui/components/Hero";
+import { IconList } from "@/modules/ui/components/IconList";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <Header
+        logo={"/header-logo.png"}
+        logoTitle={"Square"}
+        links={[
+          { text: "Home Page", href: "/" },
+          { text: "Shibas", href: "/shibas" },
+        ]}
+      />
+      <Hero
+        title={"Welcome to My Test Application"}
+        text={
+          "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi."
+        }
+        backgroundImage={{
+          url: "/hero-background.jpg",
+          alt: "Hero background",
+        }}
+        sideImage={{ url: "/side-image.jpg", alt: "Side image" }}
+      />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      {/* <IconList
+        icon={[
+          { url: "/list.png", alt: "Liste" },
+          { url: "/mail-list.png", alt: "Liste de mail" },
+          { url: "/menu.png", alt: "Menu" },
+          { url: "/project.png", alt: "Projet" },
+          { url: "/shortlist.png", alt: "Liste courte" },
+        ]}
+      /> */}
+
+      <div className="container mx-auto px-4 py-10">
+        <Card
+          image={{
+            url: "/card_1.jpg",
+            alt: "desktop with a laptop",
+          }}
+          title={"Noteworthy technology acquisitions 2021"}
+          text={
+            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          }
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="container mx-auto px-4 py-10">
+        <Card
+          image={{
+            url: "/list.png",
+            alt: "desktop with a laptop",
+          }}
+          title={"Noteworthy technology acquisitions 2021"}
+          text={
+            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          }
+        />
       </div>
     </main>
-  )
+  );
 }
