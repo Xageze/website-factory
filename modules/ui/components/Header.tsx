@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import "../../../app/globals.css";
-import { motion } from "framer-motion";
-import { Cross } from "@/modules/svgs/components/cross";
+import { motion, AnimatePresence } from "framer-motion";
+import { Cross } from "@/modules/svgs/components/Cross";
+import { ImageType } from "@/modules/miscellaneous/type";
 
 type Link = {
   text: string;
@@ -14,7 +15,7 @@ type Link = {
 };
 
 type Props = {
-  logo: string;
+  logo: ImageType;
   logoTitle: string;
   links: Array<Link>;
   backgroundColor?: string;
@@ -34,15 +35,14 @@ export const Header: React.FC<Props> & { height: number } = ({
     >
       <div className="container mx-auto px-4 flex items-center justify-between space-x-8">
         <div className="flex items-center space-x-8">
-          <div className="relative h-14 aspect-square">
-            <Image
-              src={logo}
-              alt={"Logo de la page d'accueil"}
-              fill
-              className="object-contain"
-            />
-          </div>
-          <h3 className="text-xl font-bold">{logoTitle}</h3>
+          <Image
+            src={logo.url}
+            alt={logo.alt}
+            height={60}
+            width={60}
+            className="object-contain"
+          />
+          <div className="text-xl font-bold">{logoTitle}</div>
         </div>
 
         <div className="hidden md:flex space-x-8">
@@ -60,29 +60,32 @@ export const Header: React.FC<Props> & { height: number } = ({
       </div>
 
       {/* MENU BURGER */}
-      {opened && (
-        <motion.div
-          transition={{ duration: 0.6 }}
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          className="absolute bg-[#373A47] h-screen w-72 top-0 right-0 flex flex-col items-center transition-opacity opacity-100"
-        >
-          <button onClick={toggle} className="p-2 self-start">
-            <Cross />
-          </button>
-          <div className="flex flex-col text-gray-300 font-bold pt-10 space-y-4 underline">
-            {links.map((link) => (
-              <Link
-                key={link.text + link.href}
-                href={link.href}
-                className="hover:text-gray-400"
-              >
-                {link.text}
-              </Link>
-            ))}
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {opened && (
+          <motion.div
+            initial={{ translateX: "100%" }}
+            animate={{ translateX: 0 }}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
+            exit={{ translateX: "100%" }}
+            className="absolute bg-gray-100 h-screen w-72 top-0 right-0 flex flex-col"
+          >
+            <button onClick={toggle} className="p-3">
+              <Cross />
+            </button>
+            <div className="font-bold pt-10 flex flex-col">
+              {links.map((link) => (
+                <Link
+                  key={link.text + link.href}
+                  href={link.href}
+                  className="px-6 py-2 hover:bg-gray-300"
+                >
+                  {link.text}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

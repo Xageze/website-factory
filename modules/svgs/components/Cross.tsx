@@ -3,7 +3,7 @@ import React from "react";
 export const Cross: React.FC = () => {
   return (
     <svg
-      fill="#BCC3C7"
+      fill="#000000"
       height="16px"
       width="16px"
       version="1.1"
@@ -12,6 +12,7 @@ export const Cross: React.FC = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 512 512"
       xmlSpace="preserve"
+      className="hover:fill-gray-500"
     >
       <g>
         <g>

@@ -1,14 +1,15 @@
-import { Card } from "@/modules/ui/components/Card";
 import { Header } from "@/modules/ui/components/Header";
 import { Hero } from "@/modules/ui/components/Hero";
 import { IconList } from "@/modules/ui/components/IconList";
+import { Card } from "@/modules/ui/components/Card";
 import { ImageAndText } from "@/modules/ui/components/ImageAndText";
+import { Footer } from "@/modules/ui/components/Footer";
 
 export default function Home() {
   return (
     <main>
       <Header
-        logo={"/header-logo.png"}
+        logo={{ url: "/header-logo.png", alt: "Logo" }}
         logoTitle={"Square"}
         links={[
           { text: "Home Page", href: "/" },
@@ -27,17 +28,7 @@ export default function Home() {
         sideImage={{ url: "/side-image.jpg", alt: "Side image" }}
       />
 
-      {/* <IconList
-        icon={[
-          { url: "/list.png", alt: "Liste" },
-          { url: "/mail-list.png", alt: "Liste de mail" },
-          { url: "/menu.png", alt: "Menu" },
-          { url: "/project.png", alt: "Projet" },
-          { url: "/shortlist.png", alt: "Liste courte" },
-        ]}
-      /> */}
-
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-10 flex justify-center sm:justify-start">
         <Card
           image={{
             url: "/card_1.jpg",
@@ -49,7 +40,86 @@ export default function Home() {
           }
         />
       </div>
-      <ImageAndText />
+      <div className="container mx-auto px-4 py-10 lg:py-40">
+        <ImageAndText
+          image={{
+            url: "/side-image.jpg",
+            alt: "montagnes",
+          }}
+          title={"Lorem Ipsum Titre de test"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac. Pellentesque lobortis ex suscipit risus pellentesque euismod. Praesent sed libero eget lacus tincidunt suscipit. Sed nunc arcu, tincidunt vel maximus eu, tempus ut metus. Aenean sodales cursus rhoncus. Etiam eleifend facilisis bibendum. "
+          }
+          imagePosition={"left"}
+        />
+      </div>
+      <div className="container mx-auto px-4 py-10 lg:py-40">
+        <ImageAndText
+          image={{
+            url: "/hero-background.jpg",
+            alt: "montagnes",
+          }}
+          title={"Lorem Ipsum Titre de test"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac. Pellentesque lobortis ex suscipit risus pellentesque euismod. Praesent sed libero eget lacus tincidunt suscipit. Sed nunc arcu, tincidunt vel maximus eu, tempus ut metus. Aenean sodales cursus rhoncus. Etiam eleifend facilisis bibendum. "
+          }
+          imagePosition={"right"}
+        />
+      </div>
+      <Footer
+        logo={{ url: "/header-logo.png", alt: "Logo" }}
+        logoTitle={"Square"}
+        linkCategory={[
+          {
+            title: "RESSOURCES",
+            links: [
+              { text: "Square", href: "/" },
+              { text: "Tailwind CSS", href: "/" },
+            ],
+          },
+          {
+            title: "FOLLOW US",
+            links: [
+              { text: "GitHub", href: "/" },
+              { text: "Discord", href: "/" },
+            ],
+          },
+          {
+            title: "LEGAL",
+            links: [
+              { text: "Privacy Policy", href: "/" },
+              { text: "Terms & Conditions", href: "/" },
+            ],
+          },
+        ]}
+        allRightResevered={`© ${new Date().getFullYear()} Square. All rights reserved.`}
+        socialMedia={[
+          {
+            href: "https://discord.com/",
+            icon: { url: "/discord.png", alt: "Discord" },
+          },
+          {
+            href: "https://github.com/Xageze",
+            icon: { url: "/github.png", alt: "Github" },
+          },
+          {
+            href: "https://twitter.com/",
+            icon: { url: "/twitter.png", alt: "Twitter" },
+          },
+        ]}
+      />
     </main>
   );
+}
+
+{
+  /* <IconList
+  icon={[
+    { url: "/list.png", alt: "Liste" },
+    { url: "/mail-list.png", alt: "Liste de mail" },
+    { url: "/menu.png", alt: "Menu" },
+    { url: "/project.png", alt: "Projet" },
+    { url: "/shortlist.png", alt: "Liste courte" },
+  ]}
+/>; */
 }
