@@ -4,6 +4,7 @@ import { IconList } from "@/modules/ui/components/IconList";
 import { Card } from "@/modules/ui/components/Card";
 import { ImageAndText } from "@/modules/ui/components/ImageAndText";
 import { Footer } from "@/modules/ui/components/Footer";
+import { Headings } from "@/modules/ui/components/Headings";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
         sideImage={{ url: "/side-image.jpg", alt: "Side image" }}
       />
 
-      <div className="container mx-auto px-4 py-10 flex justify-center sm:justify-start">
+      <div className="container mx-auto px-4 space-y-20 py-20">
         <Card
           image={{
             url: "/card_1.jpg",
@@ -39,31 +40,41 @@ export default function Home() {
             "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           }
         />
-      </div>
-      <div className="container mx-auto px-4 py-10 lg:py-40">
-        <ImageAndText
-          image={{
-            url: "/side-image.jpg",
-            alt: "montagnes",
-          }}
-          title={"Lorem Ipsum Titre de test"}
+        <div className="flex flex-col space-y-60 py-40">
+          <ImageAndText
+            image={{
+              url: "/side-image.jpg",
+              alt: "montagnes",
+            }}
+            title={"Lorem Ipsum Titre de test"}
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac. Pellentesque lobortis ex suscipit risus pellentesque euismod. Praesent sed libero eget lacus tincidunt suscipit. Sed nunc arcu, tincidunt vel maximus eu, tempus ut metus. Aenean sodales cursus rhoncus. Etiam eleifend facilisis bibendum. "
+            }
+            imagePosition={"right"}
+          />
+          <ImageAndText
+            image={{
+              url: "/hero-background.jpg",
+              alt: "montagnes",
+            }}
+            title={"Lorem Ipsum Titre de test"}
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac. Pellentesque lobortis ex suscipit risus pellentesque euismod. Praesent sed libero eget lacus tincidunt suscipit. Sed nunc arcu, tincidunt vel maximus eu, tempus ut metus. Aenean sodales cursus rhoncus. Etiam eleifend facilisis bibendum. "
+            }
+            imagePosition={"left"}
+          />
+        </div>
+
+        <Headings
+          icon={{ url: "/header-logo.png", alt: "Liste" }}
+          title={"We invest in the world's potential"}
           text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac. Pellentesque lobortis ex suscipit risus pellentesque euismod. Praesent sed libero eget lacus tincidunt suscipit. Sed nunc arcu, tincidunt vel maximus eu, tempus ut metus. Aenean sodales cursus rhoncus. Etiam eleifend facilisis bibendum. "
+            "Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
           }
-          imagePosition={"right"}
-        />
-      </div>
-      <div className="container mx-auto px-4 py-10 lg:py-40">
-        <ImageAndText
-          image={{
-            url: "/hero-background.jpg",
-            alt: "montagnes",
+          buttonLink={{
+            text: "Learn more",
+            href: "/",
           }}
-          title={"Lorem Ipsum Titre de test"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac. Pellentesque lobortis ex suscipit risus pellentesque euismod. Praesent sed libero eget lacus tincidunt suscipit. Sed nunc arcu, tincidunt vel maximus eu, tempus ut metus. Aenean sodales cursus rhoncus. Etiam eleifend facilisis bibendum. "
-          }
-          imagePosition={"left"}
         />
       </div>
       <Footer

@@ -1,6 +1,4 @@
-import React from "react";
-
-export const Cross: React.FC = () => {
+export const Cross = () => {
   return (
     <svg
       fill="#000000"

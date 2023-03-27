@@ -34,7 +34,13 @@ export const ImageAndText: React.FC<Props> = ({
           imagePosition === "right" ? "left-1/2" : "right-1/2"
         )}
       >
-        <Image src={image.url} alt={image.alt} height={2000} width={2000} />
+        <Image
+          src={image.url}
+          alt={image.alt}
+          height={400}
+          width={1000}
+          className="max-h-[400px] object-contain"
+        />
       </div>
     </div>
   );

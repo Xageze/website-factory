@@ -1,6 +1,5 @@
 "use client";
 import { ImageType } from "@/modules/miscellaneous/type";
-import { motion, useCycle } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 

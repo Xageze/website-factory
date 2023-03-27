@@ -3,13 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ImageType } from "@/modules/miscellaneous/type";
+import { ImageType, LinkType } from "@/modules/miscellaneous/type";
 import { useBreakpoint } from "../hooks/useBreakpoint";
 
-type TextLink = {
-  href: string;
-  text: string;
-};
 type IconLink = {
   href: string;
   icon: ImageType;
@@ -17,7 +13,7 @@ type IconLink = {
 
 type LinkCategory = {
   title: string;
-  links: Array<TextLink>;
+  links: Array<LinkType>;
 };
 
 type Props = {
