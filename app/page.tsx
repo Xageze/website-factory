@@ -5,6 +5,7 @@ import { Card } from "@/modules/ui/components/Card";
 import { ImageAndText } from "@/modules/ui/components/ImageAndText";
 import { Footer } from "@/modules/ui/components/Footer";
 import { Headings } from "@/modules/ui/components/Headings";
+import { ContactForm } from "@/modules/ui/components/ContactForm";
 
 export default function Home() {
   return (
@@ -76,6 +77,7 @@ export default function Home() {
             href: "/",
           }}
         />
+        <ContactForm />
       </div>
       <Footer
         logo={{ url: "/header-logo.png", alt: "Logo" }}
