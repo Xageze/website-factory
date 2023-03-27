@@ -1,5 +1,6 @@
 "use client";
 import { ImageType } from "@/modules/miscellaneous/type";
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -10,6 +11,7 @@ type Props = {
   text: string;
   sideImage?: ImageType;
   backgroundImage?: ImageType;
+  bgOpacity?: "black" | "white";
 };
 
 export const Hero: React.FC<Props> = ({
@@ -17,7 +19,9 @@ export const Hero: React.FC<Props> = ({
   text,
   sideImage,
   backgroundImage,
+  bgOpacity,
 }) => {
+  console.log(bgOpacity);
   return (
     <div
       className="relative flex items-center justify-center"
@@ -25,12 +29,21 @@ export const Hero: React.FC<Props> = ({
     >
       {/* BACKGROUND IMAGE */}
       {backgroundImage && (
-        <Image
-          src={backgroundImage?.url}
-          alt={backgroundImage?.alt}
-          fill
-          className="object-cover -z-10"
-        />
+        <>
+          <Image
+            src={backgroundImage?.url}
+            alt={backgroundImage?.alt}
+            fill
+            className="object-cover"
+          />
+          <div
+            className={clsx(
+              "absolute h-full w-full opacity-10",
+              bgOpacity === "black" ? "bg-black" : null,
+              bgOpacity === "white" ? "bg-white" : null
+            )}
+          />
+        </>
       )}
 
       {/* TEXT + SIDE IMAGE */}
@@ -38,7 +51,7 @@ export const Hero: React.FC<Props> = ({
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, stiffness: 150 }}
-        className="container mx-auto px-8 flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 space-y-10"
+        className="container mx-auto px-8 flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 space-y-10 z-0"
       >
         {/* TEXT */}
         <div className="text-center lg:text-start space-y-4">

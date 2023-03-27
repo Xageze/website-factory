@@ -25,13 +25,14 @@ export const Header: React.FC<Props> & { height: number } = ({
   logo,
   logoTitle,
   links,
+  backgroundColor = "white",
 }) => {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
     <header
       className="sticky top-0 text-lg font-medium shadow-lg flex items-center bg-white z-10"
-      style={{ height: Header.height }}
+      style={{ height: Header.height, backgroundColor: backgroundColor }}
     >
       <div className="container mx-auto px-4 flex items-center justify-between space-x-8">
         <div className="flex items-center space-x-8">

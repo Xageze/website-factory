@@ -5,7 +5,7 @@ import { Input } from "./Input";
 export const ContactForm: React.FC = () => {
   return (
     <form className="max-w-[600px] bg-white border border-gray-300 rounded-lg p-6 shadow-xl flex flex-col space-y-6">
-      <h3 className="font-semibold text-2xl">Contactez-nous.</h3>
+      <h3 className="pb-4 font-semibold text-2xl">Contactez-nous.</h3>
       <div
         className={clsx(
           "space-x-0 sm:space-x-4 space-y-6 sm:space-y-0",
@@ -35,7 +35,7 @@ export const ContactForm: React.FC = () => {
       <button
         type="submit"
         className={clsx(
-          "mt-4 px-4 py-2 w-min self-center",
+          "mt-4 px-5 py-3 w-min self-center",
           "text-white font-semibold bg-blue-500 hover:bg-blue-700 rounded-lg"
         )}
       >
