@@ -40,7 +40,7 @@ export const Footer: React.FC<Props> = ({
   return (
     <footer className="bg-gray-100 mt-10">
       <div
-        className="container mx-auto p-4 grid gap-4"
+        className="container mx-auto p-4 grid gap-4 place-content-center"
         style={
           smBreakpoint
             ? { gridTemplateColumns: `repeat(${linkCategory.length + 1}, 1fr)` }
@@ -61,7 +61,11 @@ export const Footer: React.FC<Props> = ({
               <div className="flex flex-col space-y-2">
                 {category.links.map((link) => {
                   return (
-                    <Link key={link.text} href={link.href}>
+                    <Link
+                      key={link.text}
+                      href={link.href}
+                      className="font-semibold text-gray-500 hover:text-black hover:underline"
+                    >
                       {link.text}
                     </Link>
                   );
@@ -73,7 +77,7 @@ export const Footer: React.FC<Props> = ({
       </div>
       <div className="container mx-auto border border-gray-300" />
       {/* CopyRights + Social Media */}
-      <div className="container mx-auto p-4 flex items-center justify-between">
+      <div className="container mx-auto p-4 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
         <div>{allRightResevered}</div>
         <div className="flex space-x-10">
           {socialMedia.map((socialMedia) => {

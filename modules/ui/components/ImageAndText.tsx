@@ -17,12 +17,11 @@ export const ImageAndText: React.FC<Props> = ({
   imagePosition,
 }) => {
   return (
-    <div className="relative flex flex-col lg:flex-row items-center justify-center lg:space-x-10 bg-green-400">
-      {/* // TODO Better CSS (Image when left is yo close to the text) */}
+    <div className="relative flex flex-col lg:flex-row items-center justify-center">
       {/* Title + Text */}
       <div
         className={
-          imagePosition === "right" ? "mr-0 lg:mr-[50%]" : "ml-0 lg:ml-[50%]"
+          imagePosition === "right" ? "mr-0 lg:mr-[53%]" : "ml-0 lg:ml-[53%]"
         }
       >
         <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold">{title}</h3>
@@ -35,7 +34,7 @@ export const ImageAndText: React.FC<Props> = ({
           imagePosition === "right" ? "left-1/2" : "right-1/2"
         )}
       >
-        <Image src={image.url} alt={image.alt} height={2500} width={2500} />
+        <Image src={image.url} alt={image.alt} height={2000} width={2000} />
       </div>
     </div>
   );
