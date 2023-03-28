@@ -21,7 +21,6 @@ export const Hero: React.FC<Props> = ({
   backgroundImage,
   bgOpacity,
 }) => {
-  console.log(bgOpacity);
   return (
     <div
       className="relative flex items-center justify-center"

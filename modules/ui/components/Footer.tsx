@@ -34,7 +34,7 @@ export const Footer: React.FC<Props> = ({
   const smBreakpoint = useBreakpoint("sm");
 
   return (
-    <footer className="bg-gray-100 mt-10">
+    <footer className="bg-gray-100 mt-14">
       <div
         className="container mx-auto p-4 grid gap-4 place-content-center"
         style={

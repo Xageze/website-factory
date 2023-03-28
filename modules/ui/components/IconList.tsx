@@ -1,45 +1,66 @@
 "use client";
 import { ImageType } from "@/modules/miscellaneous/type";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
 type Props = {
   icon: Array<ImageType>;
+  duration?: number;
+  className?: string;
 };
 
-export const IconList: React.FC<Props> = ({ icon }) => {
+export const IconList: React.FC<Props> = ({
+  icon,
+  duration = 10,
+  className,
+}) => {
   return (
-    <div className="flex items-center justify-center bg-red-200">
-      <div className="relative flex w-[1000px] h-24 bg-orange-300 overflow-hidden">
-        <div className="flex h-24 items-center ">
-          {icon.map((item, index) => {
-            return (
-              <div key={index} className="relative items-center h-20 w-40">
-                <Image
-                  src={item.url}
-                  alt={item.alt}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            );
-          })}
-        </div>
+    <div className={className}>
+      <div className="flex overflow-hidden">
+        <motion.div
+          animate={{
+            x: "-50%",
+            transition: {
+              duration,
+              ease: "linear",
+              repeat: Infinity,
+            },
+          }}
+          className="flex"
+        >
+          {/* List 1 */}
+          <div className="w-screen flex justify-around">
+            {icon.map((item, index) => {
+              return (
+                <div key={index} className="relative items-center h-20 w-40">
+                  <Image
+                    src={item.url}
+                    alt={item.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              );
+            })}
+          </div>
 
-        <div>
-          {icon.map((item, index) => {
-            return (
-              <div key={index} className="relative items-center h-20 w-40">
-                <Image
-                  src={item.url}
-                  alt={item.alt}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            );
-          })}
-        </div>
+          {/* List 2 */}
+          <div className="w-screen flex justify-around">
+            {icon.map((item, index) => {
+              return (
+                <div key={index} className="relative items-center h-20 w-40">
+                  <Image
+                    src={item.url}
+                    alt={item.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
       </div>
     </div>
   );
