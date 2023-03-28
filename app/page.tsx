@@ -11,14 +11,6 @@ import { Pricing } from "@/modules/ui/components/Pricing";
 export default function Home() {
   return (
     <main>
-      <Header
-        logo={{ url: "/header-logo.png", alt: "Logo" }}
-        logoTitle={"Square"}
-        links={[
-          { text: "Home Page", href: "/" },
-          { text: "Shibas", href: "/shibas" },
-        ]}
-      />
       <Hero
         title={"Welcome to My Test Application"}
         text={
@@ -115,48 +107,6 @@ export default function Home() {
           ]}
         />
       </div>
-      <Footer
-        logo={{ url: "/header-logo.png", alt: "Logo" }}
-        logoTitle={"Square"}
-        linkCategory={[
-          {
-            title: "RESSOURCES",
-            links: [
-              { text: "Square", href: "/" },
-              { text: "Tailwind CSS", href: "/" },
-            ],
-          },
-          {
-            title: "FOLLOW US",
-            links: [
-              { text: "GitHub", href: "/" },
-              { text: "Discord", href: "/" },
-            ],
-          },
-          {
-            title: "LEGAL",
-            links: [
-              { text: "Privacy Policy", href: "/" },
-              { text: "Terms & Conditions", href: "/" },
-            ],
-          },
-        ]}
-        allRightResevered={`© ${new Date().getFullYear()} Square. All rights reserved.`}
-        socialMedia={[
-          {
-            href: "https://discord.com/",
-            icon: { url: "/discord.png", alt: "Discord" },
-          },
-          {
-            href: "https://github.com/Xageze",
-            icon: { url: "/github.png", alt: "Github" },
-          },
-          {
-            href: "https://twitter.com/",
-            icon: { url: "/twitter.png", alt: "Twitter" },
-          },
-        ]}
-      />
     </main>
   );
 }
