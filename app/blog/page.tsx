@@ -1,30 +1,69 @@
 import React from "react";
-import fs from "fs";
-import Link from "next/link";
-
-const getBlogs = () => {
-  const folder = "posts/";
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
-  const slugs = markdownPosts.map((file) => file.replace(".md", ""));
-  return slugs;
-};
+import { BlogCard } from "@/modules/ui/components/BlogCard";
 
 const page: React.FC = () => {
-  const blogsMetadata = getBlogs();
-  const blogsPreviews = blogsMetadata.map((slug) => (
-    <div key={slug}>
-      <Link href={`/blog/${slug}`}>
-        <h2>{slug}</h2>
-      </Link>
-    </div>
-  ));
-
   return (
-    <div className="container mx-auto px-4 flex flex-col items-center">
-      <h2 className="text-2xl sm:text-3xl font-bold">Blog</h2>
+    <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
+      <h2 className="pt-12 text-3xl sm:text-4xl font-bold">Blog</h2>
       <p>Les derniers blogs</p>
-      <div>{blogsPreviews}</div>
+      <div className="w-full border border-gray-200" />
+      <div className="flex flex-wrap justify-center gap-10">
+        <BlogCard
+          title={"Titre 1"}
+          description={
+            "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
+          }
+          date={new Date().toLocaleDateString("fr-FR", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
+        />
+        <BlogCard
+          title={"Titre 2"}
+          description={
+            "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
+          }
+          date={new Date().toLocaleDateString("fr-FR", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
+        />
+        <BlogCard
+          title={"Titre 3"}
+          description={
+            "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
+          }
+          date={new Date().toLocaleDateString("fr-FR", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
+        />
+        <BlogCard
+          title={"Titre 4 Hehe"}
+          description={
+            "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
+          }
+          date={new Date().toLocaleDateString("fr-FR", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
+        />
+        <BlogCard
+          title={"Titre 5"}
+          description={
+            "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
+          }
+          date={new Date().toLocaleDateString("fr-FR", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
+        />
+      </div>
     </div>
   );
 };
