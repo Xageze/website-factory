@@ -73,6 +73,7 @@ export const Header: React.FC<Props> & { height: number } = ({
                 <Link
                   key={link.text + link.href}
                   href={link.href}
+                  onClick={toggle}
                   className="px-6 py-2 hover:bg-gray-300"
                 >
                   {link.text}
