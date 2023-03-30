@@ -1,3 +1,6 @@
+import type { Route } from "next";
+import { UrlObject } from "url";
+
 export type ImageType = {
   url: string;
   alt: string;
@@ -5,5 +8,10 @@ export type ImageType = {
 
 export type LinkType = {
   text: string;
-  href: string;
+  href: UrlObject | Route;
+};
+
+export type IconLink = {
+  href: UrlObject | Route;
+  icon: ImageType;
 };

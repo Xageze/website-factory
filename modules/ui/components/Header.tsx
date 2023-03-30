@@ -7,17 +7,12 @@ import { useDisclosure } from "@mantine/hooks";
 import "../../../app/globals.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cross } from "@/modules/svgs/components/Cross";
-import { ImageType } from "@/modules/miscellaneous/type";
-
-type Link = {
-  text: string;
-  href: string;
-};
+import { ImageType, LinkType } from "@/modules/miscellaneous/type";
 
 type Props = {
   logo: ImageType;
   logoTitle: string;
-  links: Array<Link>;
+  links: Array<LinkType>;
   backgroundColor?: string;
 };
 
@@ -41,7 +36,7 @@ export const Header: React.FC<Props> & { height: number } = ({
             alt={logo.alt}
             height={60}
             width={60}
-            className="object-contain"
+            className="object-contain object-left"
           />
           <div className="text-xl font-bold">{logoTitle}</div>
         </div>

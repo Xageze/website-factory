@@ -16,16 +16,18 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <div className="min-h-screen flex flex-col justify-between">
-          <Header
-            logo={{ url: "/header-logo.png", alt: "Logo" }}
-            logoTitle={"Square"}
-            links={[
-              { text: "Home Page", href: "/" },
-              { text: "Shibas", href: "/shibas" },
-              { text: "Blog", href: "/blog" },
-            ]}
-          />
-          {children}
+          <div>
+            <Header
+              logo={{ url: "/header-logo.png", alt: "Logo" }}
+              logoTitle={"Square"}
+              links={[
+                { text: "Home Page", href: "/" },
+                { text: "Shibas", href: "/shibas" },
+                { text: "Blog", href: "/blog" },
+              ]}
+            />
+            {children}
+          </div>
           <Footer
             logo={{ url: "/header-logo.png", alt: "Logo" }}
             logoTitle={"Square"}
