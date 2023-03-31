@@ -1,9 +1,7 @@
-import { Header } from "@/modules/ui/components/Header";
 import { Hero } from "@/modules/ui/components/Hero";
 import { IconList } from "@/modules/ui/components/IconList";
 import { Card } from "@/modules/ui/components/Card";
 import { ImageAndText } from "@/modules/ui/components/ImageAndText";
-import { Footer } from "@/modules/ui/components/Footer";
 import { Headings } from "@/modules/ui/components/Headings";
 import { ContactForm } from "@/modules/ui/components/ContactForm";
 import { Pricing } from "@/modules/ui/components/Pricing";
@@ -30,7 +28,7 @@ export default function Home() {
           { url: "/project.png", alt: "Projet" },
           { url: "/shortlist.png", alt: "Liste courte" },
         ]}
-        duration={14}
+        duration={18}
         className="pt-20"
       />
       <div className="container mx-auto pt-20 flex flex-col space-y-40">

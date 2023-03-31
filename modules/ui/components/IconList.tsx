@@ -12,7 +12,7 @@ type Props = {
 
 export const IconList: React.FC<Props> = ({
   icon,
-  duration = 10,
+  duration = 20,
   className,
 }) => {
   return (
@@ -30,7 +30,7 @@ export const IconList: React.FC<Props> = ({
           className="flex"
         >
           {/* List 1 */}
-          <div className="w-screen flex justify-around">
+          <div className="w-[100vh] sm:w-screen flex justify-around">
             {icon.map((item, index) => {
               return (
                 <div key={index} className="relative items-center h-20 w-40">
@@ -46,7 +46,7 @@ export const IconList: React.FC<Props> = ({
           </div>
 
           {/* List 2 */}
-          <div className="w-screen flex justify-around">
+          <div className="w-[100vh] sm:w-screen flex justify-around">
             {icon.map((item, index) => {
               return (
                 <div key={index} className="relative items-center h-20 w-40">
