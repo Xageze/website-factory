@@ -71,7 +71,7 @@ export const Header: React.FC<Props> & { height: number } = ({
                 height: `calc(100vh - ${Header.height}px)`,
                 top: Header.height,
               }}
-            ></motion.div>
+            />
             <motion.div
               initial={{ opacity: 0 }}
               animate={{
