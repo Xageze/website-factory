@@ -63,12 +63,13 @@ export const Header: React.FC<Props> & { height: number } = ({
             animate={{ translateX: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
             exit={{ translateX: "100%" }}
-            className="absolute bg-gray-100 h-screen w-72 top-0 right-0 flex flex-col"
+            className="absolute right-0 w-72 bg-gray-100 shadow-2xl flex flex-col"
+            style={{
+              height: `calc(100vh - ${Header.height}px)`,
+              top: Header.height,
+            }}
           >
-            <button onClick={toggle} className="p-3">
-              <Cross />
-            </button>
-            <div className="font-bold pt-10 flex flex-col">
+            <div className="font-bold flex flex-col">
               {links.map((link) => (
                 <Link
                   key={link.text + link.href}
