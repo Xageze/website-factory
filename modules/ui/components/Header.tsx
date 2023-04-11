@@ -63,9 +63,9 @@ export const Header: React.FC<Props> & { height: number } = ({
               initial={{ width: 0 }}
               animate={{
                 width: 288,
-                transition: { duration: 0.6 },
+                transition: { duration: 0.4 },
               }}
-              exit={{ width: 0, transition: { delay: 0.6, duration: 0.6 } }}
+              exit={{ width: 0, transition: { delay: 0.4, duration: 0.4 } }}
               className="absolute right-0 bg-gray-100 shadow-2xl flex flex-col"
               style={{
                 height: `calc(100vh - ${Header.height}px)`,
@@ -76,11 +76,11 @@ export const Header: React.FC<Props> & { height: number } = ({
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
-                transition: { delay: 0.6, duration: 0.6 },
+                transition: { delay: 0.4, duration: 0.4 },
               }}
               exit={{
                 opacity: 0,
-                transition: { delay: 0, duration: 0.6 },
+                transition: { delay: 0, duration: 0.4 },
               }}
               className="absolute w-72 right-0 font-bold flex flex-col"
               style={{
