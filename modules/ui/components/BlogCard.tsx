@@ -12,10 +12,10 @@ export const BlogCard: React.FC<Props> = ({ title, description, date }) => {
 
   return (
     <Link
-      className="p-4 max-w-xl border border-gray-300 rounded-lg"
+      className="p-6 max-w-xl bg-gray-100 rounded-lg"
       href={`/blog/${[slug]}`}
     >
-      <h1 className="mb-4 text-3xl font-bold">{title}</h1>
+      <h1 className="mb-6 text-3xl font-bold">{title}</h1>
       <p>{description}</p>
       <div className="mt-10">{date}</div>
     </Link>

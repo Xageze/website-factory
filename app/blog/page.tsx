@@ -4,12 +4,12 @@ import { BlogCard } from "@/modules/ui/components/BlogCard";
 const page: React.FC = () => {
   return (
     <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
-      <h2 className="pt-12 text-3xl sm:text-4xl font-bold">Blog</h2>
-      <p>Les derniers blogs</p>
+      <h2 className="pt-12 text-4xl sm:text-5xl font-bold">Blog</h2>
+      <p>Articles and tutorials from Upstash and community.</p>
       <div className="w-full border border-gray-200" />
       <div className="flex flex-wrap justify-center gap-10">
         <BlogCard
-          title={"Titre 1"}
+          title={"Adding a View Counter to your Next.js Blog"}
           description={
             "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
           }
@@ -20,7 +20,7 @@ const page: React.FC = () => {
           })}
         />
         <BlogCard
-          title={"Titre 2"}
+          title={"Adding a View Counter to your Next.js Blog"}
           description={
             "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
           }
@@ -31,7 +31,9 @@ const page: React.FC = () => {
           })}
         />
         <BlogCard
-          title={"Titre 3"}
+          title={
+            "AI Powered Text Generator using Next.js, Replicate and Redis®"
+          }
           description={
             "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
           }
@@ -42,7 +44,7 @@ const page: React.FC = () => {
           })}
         />
         <BlogCard
-          title={"Titre 4 Hehe"}
+          title={"Serverless Event Sourcing and CQRS with Next.js and Upstash"}
           description={
             "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
           }
@@ -53,7 +55,7 @@ const page: React.FC = () => {
           })}
         />
         <BlogCard
-          title={"Titre 5"}
+          title={"Realtime analytics with Vercel Edge, Kafka and MongoDB Atlas"}
           description={
             "Description de ma carte blog, si on clique dessus ça nous renvoie sur une page et tout"
           }

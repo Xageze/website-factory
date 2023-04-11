@@ -1,10 +1,12 @@
 "use client";
-import { ImageType } from "@/modules/miscellaneous/type";
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import Image from "next/image";
+
 import React from "react";
+import Image from "next/image";
+import clsx from "clsx";
+import { ImageType } from "@/modules/miscellaneous/type";
+import { motion } from "framer-motion";
 import { Header } from "./Header";
+import { H1, H4 } from "./CustomHtml";
 
 type Props = {
   title: string;
@@ -54,12 +56,8 @@ export const Hero: React.FC<Props> = ({
       >
         {/* TEXT */}
         <div className="text-center lg:text-start space-y-4">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white font-bold">
-            {title}
-          </h1>
-          <h2 className="text-lg sm:text-xl text-white/75 font-semibold">
-            {text}
-          </h2>
+          <H1 className="text-white">{title}</H1>
+          <H4 className="text-white/75">{text}</H4>
         </div>
 
         {/* SIDE IMAGE */}

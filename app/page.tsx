@@ -86,13 +86,13 @@ export default function Home() {
             },
             {
               plan: "Starter",
-              things: ["Thing 1", "Thing 2 ", "Thing 3"],
+              things: ["Thing 1", "Thing 2 "],
               price: 20,
               buttonLink: { text: "Get started", href: "/" },
             },
             {
               plan: "Starter",
-              things: ["Thing 1", "Thing 2 ", "Thing 3"],
+              things: ["Thing 1", "Thing 2 ", "Thing 3", "Thing 4", "Thing 5"],
               price: 20,
               buttonLink: { text: "Get started", href: "/" },
             },
