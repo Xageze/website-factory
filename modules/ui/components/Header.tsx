@@ -58,18 +58,36 @@ export const Header: React.FC<Props> & { height: number } = ({
       {/* MENU BURGER */}
       <AnimatePresence>
         {opened && (
-          <motion.div
-            initial={{ translateX: "100%" }}
-            animate={{ translateX: 0 }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
-            exit={{ translateX: "100%" }}
-            className="absolute right-0 w-72 bg-gray-100 shadow-2xl flex flex-col"
-            style={{
-              height: `calc(100vh - ${Header.height}px)`,
-              top: Header.height,
-            }}
-          >
-            <div className="font-bold flex flex-col">
+          <>
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{
+                width: 288,
+                transition: { duration: 0.6 },
+              }}
+              exit={{ width: 0, transition: { delay: 0.6, duration: 0.6 } }}
+              className="absolute right-0 bg-gray-100 shadow-2xl flex flex-col"
+              style={{
+                height: `calc(100vh - ${Header.height}px)`,
+                top: Header.height,
+              }}
+            ></motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 0.6, duration: 0.6 },
+              }}
+              exit={{
+                opacity: 0,
+                transition: { delay: 0, duration: 0.6 },
+              }}
+              className="absolute w-72 right-0 font-bold flex flex-col"
+              style={{
+                height: `calc(100vh - ${Header.height}px)`,
+                top: Header.height,
+              }}
+            >
               {links.map((link) => (
                 <Link
                   key={link.text + link.href}
@@ -80,8 +98,8 @@ export const Header: React.FC<Props> & { height: number } = ({
                   {link.text}
                 </Link>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

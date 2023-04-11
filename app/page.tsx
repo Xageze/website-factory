@@ -108,15 +108,3 @@ export default function Home() {
     </main>
   );
 }
-
-{
-  /* <IconList
-  icon={[
-    { url: "/list.png", alt: "Liste" },
-    { url: "/mail-list.png", alt: "Liste de mail" },
-    { url: "/menu.png", alt: "Menu" },
-    { url: "/project.png", alt: "Projet" },
-    { url: "/shortlist.png", alt: "Liste courte" },
-  ]}
-/>; */
-}
