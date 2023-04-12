@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@emotion/react': ^11.10.6
+  '@headlessui/react': ^1.7.13
   '@mantine/carousel': ^6.0.4
   '@mantine/core': ^6.0.4
   '@mantine/hooks': ^6.0.4
@@ -27,6 +28,7 @@ specifiers:
 
 dependencies:
   '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
+  '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@mantine/carousel': 6.0.4_kg4x35yr5n6atgj4m7rpyeh4bu
   '@mantine/core': 6.0.4_t7jtalnwvyidfaogp2b564lbfq
   '@mantine/hooks': 6.0.4_react@18.2.0
@@ -259,6 +261,18 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tabbable: 6.1.1
+    dev: false
+
+  /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:

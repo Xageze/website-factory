@@ -5,7 +5,7 @@ import { H3, H4 } from "./CustomHtml";
 
 export const ContactForm: React.FC = () => {
   return (
-    <form className="max-w-[600px] bg-white border border-gray-300 rounded-lg px-12 py-6 shadow-xl flex flex-col space-y-6">
+    <form className="max-w-[600px] bg-white border border-gray-300 rounded-lg px-12 py-6 shadow-sm flex flex-col space-y-6">
       <H3 className="pb-4">Contactez-nous.</H3>
       <div
         className={clsx(

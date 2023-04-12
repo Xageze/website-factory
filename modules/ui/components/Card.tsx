@@ -11,7 +11,7 @@ type Props = {
 
 export const Card: React.FC<Props> = ({ image, title, text }) => {
   return (
-    <div className="border max-w-xs rounded-lg overflow-hidden shadow-md">
+    <div className="border max-w-xs rounded-lg overflow-hidden shadow-sm">
       {/* Image */}
       <Image src={image.url} alt={image.alt} height={320} width={320} />
       {/* Title + Text */}

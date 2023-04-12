@@ -5,6 +5,7 @@ import { ImageAndText } from "@/modules/ui/components/ImageAndText";
 import { Headings } from "@/modules/ui/components/Headings";
 import { ContactForm } from "@/modules/ui/components/ContactForm";
 import { Pricing } from "@/modules/ui/components/Pricing";
+import { Faq } from "@/modules/ui/components/Faq";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
         duration={18}
         className="pt-20"
       />
-      <div className="container mx-auto pt-20 flex flex-col space-y-40">
+      <div className="container mx-auto px-3 sm:px-6 pt-20 flex flex-col space-y-52">
         <Card
           image={{
             url: "/card_1.jpg",
@@ -102,6 +103,16 @@ export default function Home() {
               price: 1000,
               buttonLink: { text: "Get started", href: "/" },
             },
+          ]}
+        />
+        <Faq
+          title={"Foire aux questions"}
+          text={"Les questions les plus courantes"}
+          faqList={[
+            { question: "Question 1", answer: " Réponse 1" },
+            { question: "Question 2", answer: " Réponse 2" },
+            { question: "Question 3", answer: " Réponse 3" },
+            { question: "Question 4", answer: " Réponse 4" },
           ]}
         />
       </div>

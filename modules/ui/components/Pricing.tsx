@@ -19,7 +19,7 @@ export const Pricing: React.FC<Props> = ({ cards }) => {
   const [activeCard, setActiveCard] = useState<number>();
 
   return (
-    <div className="flex flex-wrap justify-center gap-8">
+    <div className="flex flex-wrap justify-between gap-8">
       {cards.map((card, index) => {
         return (
           <div
