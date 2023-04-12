@@ -45,7 +45,7 @@ export const H3: React.FC<Props> = ({ children, className }) => {
 
 export const H4: React.FC<Props> = ({ children, className }) => {
   return (
-    <h4 className={clsx("text-lg sm:text-xl font-semibold", className)}>
+    <h4 className={clsx("text-lg sm:text-xl font-bold", className)}>
       {children}
     </h4>
   );
@@ -53,7 +53,9 @@ export const H4: React.FC<Props> = ({ children, className }) => {
 
 export const H5: React.FC<Props> = ({ children, className }) => {
   return (
-    <h5 className={clsx("text-base sm:text-lg", className)}>{children}</h5>
+    <h5 className={clsx("text-base sm:text-lg font-semibold", className)}>
+      {children}
+    </h5>
   );
 };
 
@@ -65,7 +67,7 @@ export const Button: React.FC<Props> = ({ children, className }) => {
   return (
     <button
       className={clsx(
-        "w-fit self-center px-5 py-3 rounded-lg text-white font-semibold bg-blue-500 hover:bg-blue-600 mt-4",
+        "self-center px-5 py-3 rounded-lg text-white font-semibold bg-blue-500 hover:bg-blue-600",
         className
       )}
     >

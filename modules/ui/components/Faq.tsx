@@ -18,8 +18,8 @@ type Props = {
 
 export const Faq: React.FC<Props> = ({ title, text, faqList }) => {
   return (
-    <div className="flex">
-      <div className="flex-[2] space-y-5">
+    <div className="flex flex-col sm:flex-row text-center sm:text-left">
+      <div className="flex-[2] space-y-5 pb-12">
         <H2>{title}</H2>
         <P>{text}</P>
       </div>
@@ -53,7 +53,7 @@ export const Faq: React.FC<Props> = ({ title, text, faqList }) => {
                       leaveFrom="transform opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="p-5 pt-0">
+                      <Disclosure.Panel className="p-5 pt-0 text-left">
                         {faq.answer}
                       </Disclosure.Panel>
                     </Transition>

@@ -78,28 +78,31 @@ export default function Home() {
         />
         <ContactForm />
         <Pricing
+          title="Pricing"
           cards={[
             {
               plan: "Free",
-              things: ["Thing 1", "Thing 2 ", "Thing 3"],
+              things: ["Thing 1", "Thing 2", "Thing 3"],
               price: 0,
               buttonLink: { text: "Get started", href: "/" },
             },
             {
               plan: "Starter",
-              things: ["Thing 1", "Thing 2 "],
-              price: 20,
-              buttonLink: { text: "Get started", href: "/" },
-            },
-            {
-              plan: "Starter",
-              things: ["Thing 1", "Thing 2 ", "Thing 3", "Thing 4", "Thing 5"],
+              things: ["Thing 1", "Thing 2", "Thing 3", "Thing 4"],
               price: 20,
               buttonLink: { text: "Get started", href: "/" },
             },
             {
               plan: "Premium",
-              things: ["Thing 1", "Thing 2 ", "Thing 3"],
+              things: [
+                "Thing 1",
+                "Thing 2",
+                "Thing 3",
+                "Thing 4",
+                "Thing 5",
+                "Thing 6",
+                "Thing 7",
+              ],
               price: 1000,
               buttonLink: { text: "Get started", href: "/" },
             },
@@ -109,10 +112,14 @@ export default function Home() {
           title={"Foire aux questions"}
           text={"Les questions les plus courantes"}
           faqList={[
-            { question: "Question 1", answer: " Réponse 1" },
-            { question: "Question 2", answer: " Réponse 2" },
-            { question: "Question 3", answer: " Réponse 3" },
-            { question: "Question 4", answer: " Réponse 4" },
+            {
+              question: "Question 1",
+              answer:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat odio, mollis et magna vel, gravida elementum orci. Fusce suscipit scelerisque tellus, eget rhoncus tortor rhoncus ac.",
+            },
+            { question: "Question 2", answer: "Réponse 2" },
+            { question: "Question 3", answer: "Réponse 3" },
+            { question: "Question 4", answer: "Réponse 4" },
           ]}
         />
       </div>
