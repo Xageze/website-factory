@@ -1,10 +1,8 @@
 import { ImageType, LinkType } from "@/modules/miscellaneous/type";
 import { Arrow } from "@/modules/svgs/components/Arrow";
-import clsx from "clsx";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { CustomLink, H2, P } from "./CustomHtml";
+import Text from "./CustomHtml";
 
 type Props = {
   title: string;
@@ -31,9 +29,11 @@ export const Headings: React.FC<Props> = ({
             className="object-cover"
           />
         )}
-        <H2 className="mb-4 tracking-tight">{title}</H2>
-        <P className="mb-6 w-full sm:w-3/4">{text}</P>
-        <CustomLink hrefLink={buttonLink?.href}>{buttonLink?.text}</CustomLink>
+        <Text.H2 className="mb-4 tracking-tight">{title}</Text.H2>
+        <Text.P className="mb-6 w-full sm:w-3/4">{text}</Text.P>
+        <Text.CustomLink hrefLink={buttonLink?.href}>
+          {buttonLink?.text}
+        </Text.CustomLink>
       </div>
     </div>
   );

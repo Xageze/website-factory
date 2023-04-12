@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { Disclosure, Transition } from "@headlessui/react";
-import { H2, H4, P } from "./CustomHtml";
 import clsx from "clsx";
-import { Cross } from "@/modules/svgs/components/Cross";
+import Text from "./CustomHtml";
+import { Disclosure, Transition } from "@headlessui/react";
 import { UnionIcon } from "@/modules/svgs/components/UnionIcon";
 
 type Props = {
@@ -20,8 +19,8 @@ export const Faq: React.FC<Props> = ({ title, text, faqList }) => {
   return (
     <div className="flex flex-col sm:flex-row text-center sm:text-left">
       <div className="flex-[2] space-y-5 pb-12">
-        <H2>{title}</H2>
-        <P>{text}</P>
+        <Text.H2>{title}</Text.H2>
+        <Text.P>{text}</Text.P>
       </div>
       <div className="flex-[3] space-y-6">
         {faqList.map((faq, index) => {
@@ -31,9 +30,9 @@ export const Faq: React.FC<Props> = ({ title, text, faqList }) => {
                 {({ open }) => (
                   <>
                     <Disclosure.Button className="w-full flex items-center justify-between p-5">
-                      <h4 className="text-left text-xl font-bold pr-4">
+                      <Text.H4 className="text-left text-xl font-bold pr-4">
                         {faq.question}
-                      </h4>
+                      </Text.H4>
                       <div
                         className={clsx(
                           "h-8 w-8 aspect-square rounded-lg transition flex items-center justify-center",
@@ -54,7 +53,7 @@ export const Faq: React.FC<Props> = ({ title, text, faqList }) => {
                       leaveTo="transform scale-95 opacity-0"
                     >
                       <Disclosure.Panel className="p-5 pt-0 text-left">
-                        {faq.answer}
+                        <Text.P>{faq.answer}</Text.P>
                       </Disclosure.Panel>
                     </Transition>
                   </>

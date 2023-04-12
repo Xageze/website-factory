@@ -1,11 +1,12 @@
 import React from "react";
-import { BlogCard } from "@/modules/ui/components/BlogCard";
+import { BlogCard } from "@modules/ui/components/BlogCard";
+import Text from "@modules/ui/components/CustomHtml";
 
 const page: React.FC = () => {
   return (
     <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
-      <h2 className="pt-12 text-4xl sm:text-5xl font-bold">Blog</h2>
-      <p>Articles and tutorials from Upstash and community.</p>
+      <Text.H2 className="pt-12">Blog</Text.H2>
+      <Text.P>Articles and tutorials from Upstash and community.</Text.P>
       <div className="w-full border border-gray-200" />
       <div className="flex flex-wrap justify-center gap-10">
         <BlogCard

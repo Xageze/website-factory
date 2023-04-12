@@ -1,8 +1,8 @@
 "use client";
-import { LinkType } from "@/modules/miscellaneous/type";
+import { LinkType } from "@modules/miscellaneous/type";
 import clsx from "clsx";
 import React, { useState } from "react";
-import { Button, H2, H3, H4 } from "./CustomHtml";
+import Text from "./CustomHtml";
 
 type CardType = {
   plan: string;
@@ -21,7 +21,9 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
 
   return (
     <div>
-      <H2 className="pb-20 text-4xl font-bold text-center">{title}</H2>
+      <Text.H2 className="pb-20 text-4xl font-bold text-center">
+        {title}
+      </Text.H2>
       <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8">
         {cards.map((card, index) => {
           return (
@@ -37,14 +39,14 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
               )}
             >
               <div>
-                <H4
+                <Text.H4
                   className={clsx(
                     "text-3xl sm:text-4xl py-8 font-bold border-b-4",
                     activeCard === index && "border-blue-500"
                   )}
                 >
                   {card.plan}
-                </H4>
+                </Text.H4>
                 <ul>
                   {card.things.map((thing, index) => {
                     return (
@@ -59,10 +61,10 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
                 </ul>
               </div>
               <div>
-                <H3 className="pt-12">{card.price}€</H3>
-                <Button className="my-6 mx-4 w-3/4">
+                <Text.H3 className="pt-12">{card.price}€</Text.H3>
+                <Text.Button className="my-6 mx-4 w-3/4">
                   {card.buttonLink.text}
-                </Button>
+                </Text.Button>
               </div>
             </div>
           );

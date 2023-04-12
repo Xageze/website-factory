@@ -1,11 +1,18 @@
-import { Hero } from "@/modules/ui/components/Hero";
-import { IconList } from "@/modules/ui/components/IconList";
-import { Card } from "@/modules/ui/components/Card";
-import { ImageAndText } from "@/modules/ui/components/ImageAndText";
-import { Headings } from "@/modules/ui/components/Headings";
-import { ContactForm } from "@/modules/ui/components/ContactForm";
-import { Pricing } from "@/modules/ui/components/Pricing";
-import { Faq } from "@/modules/ui/components/Faq";
+import { Hero } from "@modules/ui/components/Hero";
+import { IconList } from "@modules/ui/components/IconList";
+import { Card } from "@modules/ui/components/Card";
+import { ImageAndText } from "@modules/ui/components/ImageAndText";
+import { Headings } from "@modules/ui/components/Headings";
+import { ContactForm } from "@modules/ui/components/ContactForm";
+import { Pricing } from "@modules/ui/components/Pricing";
+import { Faq } from "@modules/ui/components/Faq";
+import { FeatureSection } from "@modules/ui/components/FeatureSection";
+import { DomainsIcon } from "@modules/svgs/components/DomainsIcon";
+import { PasswordIcon } from "@/modules/svgs/components/PasswordIcon";
+import { SslIcon } from "@/modules/svgs/components/SslIcon";
+import { ZapIcon } from "@/modules/svgs/components/ZapIcon";
+import { SeoIcon } from "@/modules/svgs/components/SeoIcon";
+import { ResponsiveIcon } from "@/modules/svgs/components/ResponsiveIcon";
 
 export default function Home() {
   return (
@@ -123,6 +130,37 @@ export default function Home() {
           ]}
         />
       </div>
+      <FeatureSection
+        title={"Build feature rich websites with Notion"}
+        text={"Sample text just to test if it fit well :)"}
+        features={[
+          {
+            svg: <DomainsIcon />,
+            title: "Domaines",
+          },
+          {
+            svg: <PasswordIcon />,
+            title: "Mot de passe",
+          },
+          {
+            svg: <SslIcon />,
+            title: "SSL",
+          },
+          {
+            svg: <ZapIcon />,
+            title: "Zap",
+          },
+          {
+            svg: <SeoIcon />,
+            title: "SEO",
+          },
+          {
+            svg: <ResponsiveIcon />,
+            title: "Responsive",
+          },
+        ]}
+        className="py-20 my-20"
+      />
     </main>
   );
 }

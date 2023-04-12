@@ -15,7 +15,7 @@ type linkProps = {
   className?: string;
 };
 
-export const H1: React.FC<Props> = ({ children, className }) => {
+const H1: React.FC<Props> = ({ children, className }) => {
   return (
     <h1
       className={clsx("text-3xl sm:text-4xl lg:text-6xl font-bold", className)}
@@ -25,7 +25,7 @@ export const H1: React.FC<Props> = ({ children, className }) => {
   );
 };
 
-export const H2: React.FC<Props> = ({ children, className }) => {
+const H2: React.FC<Props> = ({ children, className }) => {
   return (
     <h2
       className={clsx("text-3xl sm:text-4xl lg:text-5xl font-bold", className)}
@@ -35,7 +35,7 @@ export const H2: React.FC<Props> = ({ children, className }) => {
   );
 };
 
-export const H3: React.FC<Props> = ({ children, className }) => {
+const H3: React.FC<Props> = ({ children, className }) => {
   return (
     <h3 className={clsx("text-xl sm:text-2xl font-bold", className)}>
       {children}
@@ -43,7 +43,7 @@ export const H3: React.FC<Props> = ({ children, className }) => {
   );
 };
 
-export const H4: React.FC<Props> = ({ children, className }) => {
+const H4: React.FC<Props> = ({ children, className }) => {
   return (
     <h4 className={clsx("text-lg sm:text-xl font-bold", className)}>
       {children}
@@ -51,7 +51,7 @@ export const H4: React.FC<Props> = ({ children, className }) => {
   );
 };
 
-export const H5: React.FC<Props> = ({ children, className }) => {
+const H5: React.FC<Props> = ({ children, className }) => {
   return (
     <h5 className={clsx("text-base sm:text-lg font-semibold", className)}>
       {children}
@@ -59,11 +59,11 @@ export const H5: React.FC<Props> = ({ children, className }) => {
   );
 };
 
-export const P: React.FC<Props> = ({ children, className }) => {
+const P: React.FC<Props> = ({ children, className }) => {
   return <p className={clsx("text-base sm:text-lg", className)}>{children}</p>;
 };
 
-export const Button: React.FC<Props> = ({ children, className }) => {
+const Button: React.FC<Props> = ({ children, className }) => {
   return (
     <button
       className={clsx(
@@ -76,11 +76,7 @@ export const Button: React.FC<Props> = ({ children, className }) => {
   );
 };
 
-export const CustomLink: React.FC<linkProps> = ({
-  children,
-  className,
-  hrefLink,
-}) => {
+const CustomLink: React.FC<linkProps> = ({ children, className, hrefLink }) => {
   return (
     <Link
       className={clsx(
@@ -96,3 +92,7 @@ export const CustomLink: React.FC<linkProps> = ({
     </Link>
   );
 };
+
+const Text = { H1, H2, H3, H4, H5, P, Button, CustomLink };
+
+export default Text;

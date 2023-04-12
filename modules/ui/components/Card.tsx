@@ -1,7 +1,7 @@
-import { ImageType } from "@/modules/miscellaneous/type";
 import Image from "next/image";
 import React from "react";
-import { Button, H3, P } from "./CustomHtml";
+import Text from "./CustomHtml";
+import { ImageType } from "@modules/miscellaneous/type";
 
 type Props = {
   image: ImageType;
@@ -16,9 +16,9 @@ export const Card: React.FC<Props> = ({ image, title, text }) => {
       <Image src={image.url} alt={image.alt} height={320} width={320} />
       {/* Title + Text */}
       <div className="p-4">
-        <H3 className="pb-3">{title}</H3>
-        <P>{text}</P>
-        <Button>Acheter</Button>
+        <Text.H3 className="pb-3">{title}</Text.H3>
+        <Text.P>{text}</Text.P>
+        <Text.Button className="mt-6">Acheter</Text.Button>
       </div>
     </div>
   );
