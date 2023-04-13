@@ -23,8 +23,9 @@ export default function RootLayout({
               links={[
                 { text: "Home Page", href: "/" },
                 { text: "Mentions légales", href: "/mentions-legales" },
-                { text: "Shibas", href: "/shibas" },
                 { text: "Blog", href: "/blog" },
+                { text: "FAQ", href: "/faq" },
+                { text: "Shibas", href: "/shibas" },
               ]}
             />
             {children}
