@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { BlogCard } from "@modules/ui/components/BlogCard";
 import CustomHtml from "@modules/ui/components/CustomHtml";
+import { BlogCard } from "@modules/ui/components/BlogCard";
 import { Categories } from "@/modules/ui/components/Categories";
 
 const Page: React.FC = () => {
@@ -32,7 +32,7 @@ const Page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
-          categorie={"Nextjs"}
+          category={"Nextjs"}
           selectedCategory={selectedCategory}
         />
         <BlogCard
@@ -45,7 +45,7 @@ const Page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
-          categorie={"Vercel"}
+          category={"Vercel"}
           selectedCategory={selectedCategory}
         />
         <BlogCard
@@ -60,7 +60,7 @@ const Page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
-          categorie={"Edge"}
+          category={"Edge"}
           selectedCategory={selectedCategory}
         />
         <BlogCard
@@ -73,7 +73,7 @@ const Page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
-          categorie={"Edge"}
+          category={"Edge"}
           selectedCategory={selectedCategory}
         />
         <BlogCard
@@ -86,7 +86,7 @@ const Page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
-          categorie={""}
+          category={""}
           selectedCategory={selectedCategory}
         />
       </div>

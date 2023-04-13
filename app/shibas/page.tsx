@@ -8,7 +8,7 @@ export default async function Page() {
     <div className="flex flex-col items-center justify-center">
       <p>You can refresh the page every 10 seconds to get new shibas</p>
       <a
-        href={"/exo1"}
+        href={"/shibas"}
         className="px-4 py-3 my-5 bg-blue-600 rounded-lg cursor-pointer"
       >
         Refresh shibas
