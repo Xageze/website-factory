@@ -3,11 +3,12 @@ import CustomHtml from "./CustomHtml";
 import clsx from "clsx";
 import { UnionIcon } from "@/modules/svgs/components/UnionIcon";
 import { Disclosure, Transition } from "@headlessui/react";
+import { CategoryType } from "@/modules/miscellaneous/type";
 
 type Props = {
   question: string;
   answer: string;
-  category: string | undefined;
+  category: CategoryType;
   selectedCategory?: string | null;
 };
 
@@ -19,24 +20,36 @@ export const FaqCard: React.FC<Props> = ({
 }) => {
   return (
     <>
-      {(selectedCategory === undefined || selectedCategory === category) && (
-        <div id={category} className="bg-gray-100 h-min rounded-xl">
+      {(selectedCategory === "Tout" || selectedCategory === category.text) && (
+        <div id={category.text} className="bg-gray-100 h-min rounded-xl">
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="w-full flex items-center justify-between p-5">
+                <Disclosure.Button className="w-full p-5 flex flex-col-reverse sm:flex-row justify-between">
                   <CustomHtml.H4 className="text-left text-xl font-bold pr-4">
                     {question}
                   </CustomHtml.H4>
-                  <div
-                    className={clsx(
-                      "h-8 w-8 aspect-square rounded-lg transition flex items-center justify-center",
-                      open
-                        ? "bg-blue-500 text-white rotate-180"
-                        : "bg-gray-300 text-black"
+                  <div className="mb-5 sm:mb-0 flex items-center space-x-4">
+                    {category.text !== "None" && (
+                      <span
+                        className={clsx(
+                          "px-5 py-1 font-semibold rounded-lg",
+                          category.color
+                        )}
+                      >
+                        {category.text}
+                      </span>
                     )}
-                  >
-                    <UnionIcon />
+                    <div
+                      className={clsx(
+                        "h-8 w-8 aspect-square rounded-lg transition flex items-center justify-center",
+                        open
+                          ? "bg-gray-500 text-white rotate-180"
+                          : "bg-gray-300 text-black"
+                      )}
+                    >
+                      <UnionIcon />
+                    </div>
                   </div>
                 </Disclosure.Button>
                 <Transition

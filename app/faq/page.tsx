@@ -5,6 +5,10 @@ import CustomHtml from "@modules/ui/components/CustomHtml";
 import { Header } from "@modules/ui/components/Header";
 import { Categories } from "@modules/ui/components/Categories";
 import { FaqCard } from "@/modules/ui/components/FaqCard";
+import {
+  categoryList,
+  categoryListArray,
+} from "@/modules/miscellaneous/categoriesList";
 
 const data = {
   pageTitle: "FAQ",
@@ -13,34 +17,59 @@ const data = {
       question: "Comment puis-je contacter le support client?",
       answer:
         "Vous pouvez nous contacter en utilisant le formulaire de contact sur notre site Web ou en nous envoyant un e-mail à l'adresse",
-      category: "Nextjs",
+      category: categoryList.NextJS,
     },
     {
       question: "Quels sont les modes de paiement acceptés?",
       answer:
         "Nous acceptons les paiements par carte de crédit (Visa, Mastercard, American Express), ainsi que les paiements PayPal.",
-      category: "Vercel",
+      category: categoryList.CSS,
     },
     {
       question: "Quelle est votre politique de retour?",
       answer: `Nous acceptons les retours jusqu'à 30 jours après l'achat, sous réserve que l'article soit dans son état d'origine et accompagné du reçu d'achat.`,
-      category: "Edge",
+      category: categoryList.JavaScript,
     },
     {
       question: "Quelle est votre politique de confidentialité?",
       answer: `Nous ne vendons pas vos informations personnelles à des tiers.`,
-      category: "Edge",
+      category: categoryList.NextJS,
     },
     {
       question: "Quelle est votre politique de livraison?",
       answer: `Nous livrons dans le monde entier.`,
-      category: undefined,
+      category: categoryList.React,
+    },
+    {
+      question: "Quelle est votre politique de livraison?",
+      answer: `Nous livrons dans le monde entier.`,
+      category: categoryList.React,
+    },
+    {
+      question: "Quelle est votre politique de livraison?",
+      answer: `Nous livrons dans le monde entier.`,
+      category: categoryList.React,
+    },
+    {
+      question: "Quelle est votre politique de livraison?",
+      answer: `Nous livrons dans le monde entier.`,
+      category: categoryList.TypeScript,
+    },
+    {
+      question: "Quelle est votre politique de livraison?",
+      answer: `Nous livrons dans le monde entier.`,
+      category: categoryList.TypeScript,
+    },
+    {
+      question: "Quelle est votre politique de livraison?",
+      answer: `Nous livrons dans le monde entier.`,
+      category: categoryList.None,
     },
   ],
 };
 
 const Page: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>();
+  const [selectedCategory, setSelectedCategory] = useState<string>("Tout");
 
   return (
     <div
@@ -53,13 +82,15 @@ const Page: React.FC = () => {
 
       <div className="relative max-w-xl flex flex-wrap justify-center items-center gap-1">
         <Categories
-          categories={["Nextjs", "Vercel", "Edge"]}
+          categories={categoryListArray}
           setSelectedCategory={setSelectedCategory}
         />
       </div>
 
+      <div className="w-full border border-gray-200" />
+
       {/* FAQs List */}
-      <div className="w-full grid sm:grid-cols-2 gap-8">
+      <div className="w-full grid md:grid-cols-2 gap-8">
         {data.faqs.map((faq, index) => (
           <FaqCard
             key={index}

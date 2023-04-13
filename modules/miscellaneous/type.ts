@@ -15,3 +15,8 @@ export type IconLink = {
   href: UrlObject | Route;
   icon: ImageType;
 };
+
+export type CategoryType = {
+  text: string;
+  color: string;
+};

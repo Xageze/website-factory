@@ -2,12 +2,13 @@ import Link from "next/link";
 import React from "react";
 import CustomHtml from "./CustomHtml";
 import clsx from "clsx";
+import { CategoryType } from "@modules/miscellaneous/type";
 
 type Props = {
   title: string;
   description: string;
   date: string;
-  category: string;
+  category: CategoryType;
   selectedCategory?: string | null;
 };
 
@@ -22,13 +23,13 @@ export const BlogCard: React.FC<Props> = ({
 
   return (
     <>
-      {(selectedCategory === undefined || selectedCategory === category) && (
+      {(selectedCategory === "Tout" || selectedCategory === category.text) && (
         <Link
           className={clsx(
-            "p-6 max-w-xl bg-gray-100 rounded-lg",
+            "p-6 max-w-2xl bg-gray-100 rounded-lg",
             "hover:-translate-y-2 transition"
           )}
-          id={category}
+          id={category.text}
           href={`/blog/${[slug]}`}
         >
           <CustomHtml.H3 className="mb-6 text-3xl font-bold">
@@ -38,8 +39,13 @@ export const BlogCard: React.FC<Props> = ({
           <div className="mt-10 w-full flex justify-between items-center">
             <span>{date}</span>
             {category && (
-              <span className="ml-5 p-2 bg-green-200 font-medium rounded-md">
-                {category}
+              <span
+                className={clsx(
+                  "px-4 py-2 font-medium rounded-lg",
+                  category.color
+                )}
+              >
+                {category.text}
               </span>
             )}
           </div>
