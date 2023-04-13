@@ -37,9 +37,11 @@ export const BlogCard: React.FC<Props> = ({
           <CustomHtml.P>{description}</CustomHtml.P>
           <div className="mt-10 w-full flex justify-between items-center">
             <span>{date}</span>
-            <span className="ml-5 p-2 bg-white font-medium rounded-md">
-              {categorie}
-            </span>
+            {categorie && (
+              <span className="ml-5 p-2 bg-green-200 font-medium rounded-md">
+                {categorie}
+              </span>
+            )}
           </div>
         </Link>
       )}
