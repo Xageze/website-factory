@@ -1,15 +1,15 @@
 import React from "react";
 import { BlogCard } from "@modules/ui/components/BlogCard";
-import Text from "@modules/ui/components/CustomHtml";
+import CustomHtml from "@modules/ui/components/CustomHtml";
 import { Categories } from "@/modules/ui/components/Categories";
 
 const page: React.FC = () => {
   return (
     <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
-      <Text.H2 className="pt-12">Blog</Text.H2>
-      <Text.P className="text-center">
+      <CustomHtml.H2 className="pt-12">Blog</CustomHtml.H2>
+      <CustomHtml.P className="text-center">
         Articles and tutorials from Upstash and community.
-      </Text.P>
+      </CustomHtml.P>
       <div className="relative max-w-xl flex flex-wrap justify-center items-center gap-1">
         <Categories
           categories={[

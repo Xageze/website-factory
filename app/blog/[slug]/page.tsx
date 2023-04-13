@@ -2,7 +2,7 @@
 
 import React from "react";
 import clsx from "clsx";
-import Text from "@modules/ui/components/CustomHtml";
+import CustomHtml from "@modules/ui/components/CustomHtml";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { ReadingProgress } from "@/modules/ui/components/ReadingProgress";
 
@@ -27,7 +27,7 @@ const Page: React.FC<Props> = ({ params }) => {
           })}
           , 5 min read
         </span>
-        <Text.H2>{params.slug}</Text.H2>
+        <CustomHtml.H2>{params.slug}</CustomHtml.H2>
         <ReactMarkdown
           className={clsx(cssH1, cssH2, cssH3, cssP, "space-y-10 pt-20")}
         >

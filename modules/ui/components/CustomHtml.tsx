@@ -93,6 +93,6 @@ const CustomLink: React.FC<linkProps> = ({ children, className, hrefLink }) => {
   );
 };
 
-const Text = { H1, H2, H3, H4, H5, P, Button, CustomLink };
+const CustomHtml = { H1, H2, H3, H4, H5, P, Button, CustomLink };
 
-export default Text;
+export default CustomHtml;

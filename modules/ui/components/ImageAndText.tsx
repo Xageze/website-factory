@@ -2,7 +2,7 @@ import { ImageType } from "@modules/miscellaneous/type";
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
-import Text from "./CustomHtml";
+import CustomHtml from "./CustomHtml";
 
 type Props = {
   image: ImageType;
@@ -25,8 +25,8 @@ export const ImageAndText: React.FC<Props> = ({
           imagePosition === "right" ? "mr-0 lg:mr-[53%]" : "ml-0 lg:ml-[53%]"
         }
       >
-        <Text.H2 className="">{title}</Text.H2>
-        <Text.P className="pt-4 sm:pt-10">{text}</Text.P>
+        <CustomHtml.H2 className="">{title}</CustomHtml.H2>
+        <CustomHtml.P className="pt-4 sm:pt-10">{text}</CustomHtml.P>
       </div>
       {/* Image */}
       <div

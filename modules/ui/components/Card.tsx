@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Text from "./CustomHtml";
+import CustomHtml from "./CustomHtml";
 import { ImageType } from "@modules/miscellaneous/type";
 
 type Props = {
@@ -16,9 +16,9 @@ export const Card: React.FC<Props> = ({ image, title, text }) => {
       <Image src={image.url} alt={image.alt} height={320} width={320} />
       {/* Title + Text */}
       <div className="p-4">
-        <Text.H3 className="pb-3">{title}</Text.H3>
-        <Text.P>{text}</Text.P>
-        <Text.Button className="mt-6">Acheter</Text.Button>
+        <CustomHtml.H3 className="pb-3">{title}</CustomHtml.H3>
+        <CustomHtml.P>{text}</CustomHtml.P>
+        <CustomHtml.Button className="mt-6">Acheter</CustomHtml.Button>
       </div>
     </div>
   );

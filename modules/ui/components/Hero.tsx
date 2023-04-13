@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { ImageType } from "@/modules/miscellaneous/type";
 import { motion } from "framer-motion";
 import { Header } from "./Header";
-import Text from "./CustomHtml";
+import CustomHtml from "./CustomHtml";
 
 type Props = {
   title: string;
@@ -56,8 +56,8 @@ export const Hero: React.FC<Props> = ({
       >
         {/* TEXT */}
         <div className="text-center lg:text-start space-y-4">
-          <Text.H1 className="text-white">{title}</Text.H1>
-          <Text.H4 className="text-white/75">{text}</Text.H4>
+          <CustomHtml.H1 className="text-white">{title}</CustomHtml.H1>
+          <CustomHtml.H4 className="text-white/75">{text}</CustomHtml.H4>
         </div>
 
         {/* SIDE IMAGE */}

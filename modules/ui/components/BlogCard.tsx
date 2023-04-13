@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Text from "./CustomHtml";
+import CustomHtml from "./CustomHtml";
 import clsx from "clsx";
 
 type Props = {
@@ -20,8 +20,8 @@ export const BlogCard: React.FC<Props> = ({ title, description, date }) => {
       )}
       href={`/blog/${[slug]}`}
     >
-      <Text.H3 className="mb-6 text-3xl font-bold">{title}</Text.H3>
-      <Text.P>{description}</Text.P>
+      <CustomHtml.H3 className="mb-6 text-3xl font-bold">{title}</CustomHtml.H3>
+      <CustomHtml.P>{description}</CustomHtml.P>
       <div className="mt-10">{date}</div>
     </Link>
   );

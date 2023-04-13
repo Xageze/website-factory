@@ -1,12 +1,12 @@
 import React from "react";
 import clsx from "clsx";
-import Text from "./CustomHtml";
+import CustomHtml from "./CustomHtml";
 import { Input } from "./Input";
 
 export const ContactForm: React.FC = () => {
   return (
     <form className="max-w-[600px] bg-white border border-gray-300 rounded-lg px-12 py-6 shadow-sm flex flex-col space-y-6">
-      <Text.H3 className="pb-4">Contactez-nous.</Text.H3>
+      <CustomHtml.H3 className="pb-4">Contactez-nous.</CustomHtml.H3>
       <div
         className={clsx(
           "space-x-0 sm:space-x-4 space-y-6 sm:space-y-0",
