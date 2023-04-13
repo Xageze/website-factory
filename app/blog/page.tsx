@@ -7,7 +7,9 @@ const page: React.FC = () => {
   return (
     <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
       <Text.H2 className="pt-12">Blog</Text.H2>
-      <Text.P>Articles and tutorials from Upstash and community.</Text.P>
+      <Text.P className="text-center">
+        Articles and tutorials from Upstash and community.
+      </Text.P>
       <div className="relative max-w-xl flex flex-wrap justify-center items-center gap-1">
         <Categories
           categories={[
