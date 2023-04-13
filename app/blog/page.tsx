@@ -1,9 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { BlogCard } from "@modules/ui/components/BlogCard";
 import CustomHtml from "@modules/ui/components/CustomHtml";
 import { Categories } from "@/modules/ui/components/Categories";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>();
+
   return (
     <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
       <CustomHtml.H2 className="pt-12">Blog</CustomHtml.H2>
@@ -12,17 +16,8 @@ const page: React.FC = () => {
       </CustomHtml.P>
       <div className="relative max-w-xl flex flex-wrap justify-center items-center gap-1">
         <Categories
-          categories={[
-            "Redis",
-            "serverless",
-            "Nextjs",
-            "Vercel",
-            "Edge",
-            "Kafka",
-            "Qstash",
-            "Cloudflare",
-            "AWS Lambda",
-          ]}
+          categories={["Nextjs", "Vercel", "Edge"]}
+          setSelectedCategory={setSelectedCategory}
         />
       </div>
       <div className="w-full border border-gray-200" />
@@ -37,6 +32,8 @@ const page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
+          categorie={"Nextjs"}
+          selectedCategory={selectedCategory}
         />
         <BlogCard
           title={"Adding a View Counter to your Next.js Blog"}
@@ -48,6 +45,8 @@ const page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
+          categorie={"Vercel"}
+          selectedCategory={selectedCategory}
         />
         <BlogCard
           title={
@@ -61,6 +60,8 @@ const page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
+          categorie={"Edge"}
+          selectedCategory={selectedCategory}
         />
         <BlogCard
           title={"Serverless Event Sourcing and CQRS with Next.js and Upstash"}
@@ -72,6 +73,8 @@ const page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
+          categorie={"Edge"}
+          selectedCategory={selectedCategory}
         />
         <BlogCard
           title={"Realtime analytics with Vercel Edge, Kafka and MongoDB Atlas"}
@@ -83,10 +86,12 @@ const page: React.FC = () => {
             month: "short",
             year: "numeric",
           })}
+          categorie={""}
+          selectedCategory={selectedCategory}
         />
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

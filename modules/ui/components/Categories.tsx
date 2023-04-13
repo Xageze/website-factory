@@ -3,15 +3,22 @@ import React from "react";
 
 type Props = {
   categories: Array<string>;
+  setSelectedCategory: (category: string) => void;
 };
 
-export const Categories: React.FC<Props> = ({ categories }) => {
+export const Categories: React.FC<Props> = ({
+  categories,
+  setSelectedCategory,
+}) => {
   return (
     <>
       {categories.map((category, index) => {
         return (
           <div className="group flex flex-col items-center" key={index}>
-            <button className="px-4 py-2 font-semibold bg-green-200 rounded-md">
+            <button
+              onClick={() => setSelectedCategory(category)}
+              className="px-4 py-2 font-semibold bg-green-200 rounded-md"
+            >
               {category}
             </button>
             <span

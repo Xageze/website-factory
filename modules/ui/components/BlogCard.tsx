@@ -6,23 +6,43 @@ import clsx from "clsx";
 type Props = {
   title: string;
   description: string;
+  categorie: string;
   date: string;
+  selectedCategory?: string | null;
 };
 
-export const BlogCard: React.FC<Props> = ({ title, description, date }) => {
+export const BlogCard: React.FC<Props> = ({
+  title,
+  description,
+  date,
+  categorie,
+  selectedCategory,
+}) => {
   const slug = title.replaceAll(" ", "-");
 
   return (
-    <Link
-      className={clsx(
-        "p-6 max-w-xl bg-gray-100 rounded-lg",
-        "hover:-translate-y-2 transition"
+    <>
+      {(selectedCategory === undefined || selectedCategory === categorie) && (
+        <Link
+          className={clsx(
+            "p-6 max-w-xl bg-gray-100 rounded-lg",
+            "hover:-translate-y-2 transition"
+          )}
+          id={categorie}
+          href={`/blog/${[slug]}`}
+        >
+          <CustomHtml.H3 className="mb-6 text-3xl font-bold">
+            {title}
+          </CustomHtml.H3>
+          <CustomHtml.P>{description}</CustomHtml.P>
+          <div className="mt-10 w-full flex justify-between items-center">
+            <span>{date}</span>
+            <span className="ml-5 p-2 bg-white font-medium rounded-md">
+              {categorie}
+            </span>
+          </div>
+        </Link>
       )}
-      href={`/blog/${[slug]}`}
-    >
-      <CustomHtml.H3 className="mb-6 text-3xl font-bold">{title}</CustomHtml.H3>
-      <CustomHtml.P>{description}</CustomHtml.P>
-      <div className="mt-10">{date}</div>
-    </Link>
+    </>
   );
 };
