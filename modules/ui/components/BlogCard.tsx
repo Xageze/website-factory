@@ -45,7 +45,7 @@ export const BlogCard: React.FC<Props> = ({
                   category.color
                 )}
               >
-                {category.text}
+                {category.text !== "None" && category.text}
               </span>
             )}
           </div>
