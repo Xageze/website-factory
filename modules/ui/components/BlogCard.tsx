@@ -38,14 +38,14 @@ export const BlogCard: React.FC<Props> = ({
           <CustomHtml.P>{description}</CustomHtml.P>
           <div className="mt-10 w-full flex justify-between items-center">
             <span>{date}</span>
-            {category && (
+            {category.text !== "None" && (
               <span
                 className={clsx(
                   "px-4 py-2 font-medium rounded-lg",
                   category.color
                 )}
               >
-                {category.text !== "None" && category.text}
+                {category.text}
               </span>
             )}
           </div>
