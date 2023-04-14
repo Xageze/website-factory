@@ -101,15 +101,7 @@ export default function Home() {
             },
             {
               plan: "Premium",
-              things: [
-                "Thing 1",
-                "Thing 2",
-                "Thing 3",
-                "Thing 4",
-                "Thing 5",
-                "Thing 6",
-                "Thing 7",
-              ],
+              things: ["Thing 1", "Thing 2", "Thing 3", "Thing 4", "Thing 5"],
               price: 1000,
               buttonLink: { text: "Get started", href: "/" },
             },
