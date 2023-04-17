@@ -1,5 +1,5 @@
 "use client";
-import { ImageType } from "@/modules/miscellaneous/type";
+import { ImageType } from "@modules/miscellaneous/type";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";

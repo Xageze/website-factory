@@ -1,7 +1,7 @@
-import { ImageType } from "@/modules/miscellaneous/type";
+import { ImageType } from "@modules/miscellaneous/type";
 import React from "react";
 import clsx from "clsx";
-import CustomHtml from "@/modules/ui/components/CustomHtml";
+import CustomHtml from "@modules/ui/components/CustomHtml";
 
 type FeatureType = {
   title?: string;

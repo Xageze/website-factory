@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import CustomHtml from "@modules/ui/components/CustomHtml";
 import { Header } from "@modules/ui/components/Header";
 import { Categories } from "@modules/ui/components/Categories";
-import { FaqCard } from "@/modules/ui/components/FaqCard";
+import { FaqCard } from "@modules/ui/components/FaqCard";
 import {
   categoryList,
   categoryListArray,
-} from "@/modules/miscellaneous/categoriesList";
+} from "@modules/miscellaneous/categoriesList";
 
 const data = {
   pageTitle: "FAQ",

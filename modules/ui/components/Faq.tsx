@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import CustomHtml from "./CustomHtml";
 import { Disclosure, Transition } from "@headlessui/react";
-import { UnionIcon } from "@/modules/svgs/components/UnionIcon";
+import { UnionIcon } from "@modules/svgs/components/UnionIcon";
 
 type Props = {
   title: string;

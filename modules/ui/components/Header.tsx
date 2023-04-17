@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { motion, AnimatePresence } from "framer-motion";
-import { ImageType, LinkType } from "@/modules/miscellaneous/type";
+import { ImageType, LinkType } from "@modules/miscellaneous/type";
 import clsx from "clsx";
 
 type Props = {

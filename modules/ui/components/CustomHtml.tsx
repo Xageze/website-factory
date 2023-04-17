@@ -1,5 +1,5 @@
-import { LinkType } from "@/modules/miscellaneous/type";
-import { Arrow } from "@/modules/svgs/components/Arrow";
+import { LinkType } from "@modules/miscellaneous/type";
+import { Arrow } from "@modules/svgs/components/Arrow";
 import clsx from "clsx";
 import Link from "next/link";
 import React from "react";

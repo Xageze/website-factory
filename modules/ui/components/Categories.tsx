@@ -1,4 +1,4 @@
-import { CategoryType } from "@/modules/miscellaneous/type";
+import { CategoryType } from "@modules/miscellaneous/type";
 import clsx from "clsx";
 import React from "react";
 

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { ImageType } from "@/modules/miscellaneous/type";
+import { ImageType } from "@modules/miscellaneous/type";
 import { motion } from "framer-motion";
 import { Header } from "./Header";
 import CustomHtml from "./CustomHtml";

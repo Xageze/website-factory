@@ -8,11 +8,11 @@ import { Pricing } from "@modules/ui/components/Pricing";
 import { Faq } from "@modules/ui/components/Faq";
 import { FeatureSection } from "@modules/ui/components/FeatureSection";
 import { DomainsIcon } from "@modules/svgs/components/DomainsIcon";
-import { PasswordIcon } from "@/modules/svgs/components/PasswordIcon";
-import { SslIcon } from "@/modules/svgs/components/SslIcon";
-import { ZapIcon } from "@/modules/svgs/components/ZapIcon";
-import { SeoIcon } from "@/modules/svgs/components/SeoIcon";
-import { ResponsiveIcon } from "@/modules/svgs/components/ResponsiveIcon";
+import { PasswordIcon } from "@modules/svgs/components/PasswordIcon";
+import { SslIcon } from "@modules/svgs/components/SslIcon";
+import { ZapIcon } from "@modules/svgs/components/ZapIcon";
+import { SeoIcon } from "@modules/svgs/components/SeoIcon";
+import { ResponsiveIcon } from "@modules/svgs/components/ResponsiveIcon";
 
 export default function Home() {
   return (

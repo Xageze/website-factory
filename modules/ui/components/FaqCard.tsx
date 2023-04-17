@@ -1,9 +1,9 @@
 import React from "react";
 import CustomHtml from "./CustomHtml";
 import clsx from "clsx";
-import { UnionIcon } from "@/modules/svgs/components/UnionIcon";
+import { UnionIcon } from "@modules/svgs/components/UnionIcon";
 import { Disclosure, Transition } from "@headlessui/react";
-import { CategoryType } from "@/modules/miscellaneous/type";
+import { CategoryType } from "@modules/miscellaneous/type";
 
 type Props = {
   question: string;

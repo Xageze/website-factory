@@ -1,5 +1,5 @@
-import { Footer } from "@/modules/ui/components/Footer";
-import { Header } from "@/modules/ui/components/Header";
+import { Footer } from "@modules/ui/components/Footer";
+import { Header } from "@modules/ui/components/Header";
 import "./globals.css";
 
 export const metadata = {
