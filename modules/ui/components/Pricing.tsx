@@ -24,7 +24,7 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
       <CustomHtml.H2 className="pb-20 text-4xl font-bold text-center">
         {title}
       </CustomHtml.H2>
-      <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8">
+      <div className=" flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8">
         {cards.map((card, index) => {
           return (
             <div
@@ -33,7 +33,7 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
                 setActiveCard(index);
               }}
               className={clsx(
-                "text-center border border-gray-300 bg-white",
+                "text-center bg-white rounded-lg shadow-sm",
                 "hover:cursor-pointer hover:scale-105 transition-all duration-300",
                 "w-full max-w-xs flex flex-col justify-between"
               )}
