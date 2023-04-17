@@ -8,9 +8,10 @@ type Props = {
   image: ImageType & { side: "left" | "right" | "above" };
   title: string;
   text: string;
+  buttonText: string;
 };
 
-export const Card: React.FC<Props> = ({ image, title, text }) => {
+export const Card: React.FC<Props> = ({ image, title, text, buttonText }) => {
   return (
     // <div className="border max-w-xs rounded-lg overflow-hidden shadow-sm">
     <div
@@ -24,14 +25,22 @@ export const Card: React.FC<Props> = ({ image, title, text }) => {
       )}
     >
       {/* Image */}
-      <Image src={image.url} alt={image.alt} width={320} height={320} />
+      <Image
+        src={image.url}
+        alt={image.alt}
+        width={320}
+        height={320}
+        className="object-cover"
+      />
       {/* Title + Text */}
       <div className="p-4 max-w-md">
         <CustomHtml.H3 className="pb-3">{title}</CustomHtml.H3>
         <CustomHtml.P className="overflow-y-scroll max-h-28">
           {text}
         </CustomHtml.P>
-        <CustomHtml.Button className="mt-6 w-full">Voir</CustomHtml.Button>
+        <CustomHtml.Button className="mt-6 w-full">
+          {buttonText}
+        </CustomHtml.Button>
       </div>
     </div>
   );

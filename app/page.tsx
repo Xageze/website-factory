@@ -50,10 +50,11 @@ export default function Home() {
           text={
             "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           }
+          buttonText={"Voir"}
         />
         <Card
           image={{
-            url: "/card_1.jpg",
+            url: "/hero-background.jpg",
             alt: "desktop with a laptop",
             side: "left",
           }}
@@ -61,10 +62,11 @@ export default function Home() {
           text={
             "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order. Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           }
+          buttonText={"Acheter"}
         />
         <Card
           image={{
-            url: "/card_1.jpg",
+            url: "/list.png",
             alt: "desktop with a laptop",
             side: "right",
           }}
@@ -72,6 +74,7 @@ export default function Home() {
           text={
             "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           }
+          buttonText={"oeoe"}
         />
         <ImageAndText
           image={{
