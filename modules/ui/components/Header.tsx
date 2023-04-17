@@ -14,7 +14,6 @@ type Props = {
   logoTitle: string;
   links: Array<LinkType>;
   backgroundColor?: string;
-  currentRoute: string;
 };
 
 export const Header: React.FC<Props> & { height: number } = ({
@@ -22,7 +21,6 @@ export const Header: React.FC<Props> & { height: number } = ({
   logoTitle,
   links,
   backgroundColor = "white",
-  currentRoute,
 }) => {
   const [opened, { toggle }] = useDisclosure(false);
 

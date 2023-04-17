@@ -27,7 +27,6 @@ export default function RootLayout({
                 { text: "FAQ", href: "/faq" },
                 { text: "Shibas", href: "/shibas" },
               ]}
-              currentRoute={"/"}
             />
             {children}
           </div>

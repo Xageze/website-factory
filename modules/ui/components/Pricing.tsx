@@ -28,7 +28,7 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
             <div
               key={index}
               className={clsx(
-                "text-center bg-white rounded-lg shadow-sm",
+                "text-center bg-white rounded-lg shadow-md",
                 "hover:cursor-pointer hover:scale-105 transition-all duration-300",
                 "w-full max-w-xs flex flex-col justify-between"
               )}
