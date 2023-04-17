@@ -3,17 +3,18 @@
 import "../../../app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 import { Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { motion, AnimatePresence } from "framer-motion";
 import { ImageType, LinkType } from "@modules/miscellaneous/type";
-import clsx from "clsx";
 
 type Props = {
   logo: ImageType;
   logoTitle: string;
   links: Array<LinkType>;
   backgroundColor?: string;
+  currentRoute: string;
 };
 
 export const Header: React.FC<Props> & { height: number } = ({
@@ -21,13 +22,14 @@ export const Header: React.FC<Props> & { height: number } = ({
   logoTitle,
   links,
   backgroundColor = "white",
+  currentRoute,
 }) => {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
     <header
       className="sticky top-0 text-lg font-medium shadow-sm flex items-center bg-white z-10"
-      style={{ height: Header.height, backgroundColor: backgroundColor }}
+      style={{ height: Header.height, backgroundColor }}
     >
       <div className="container mx-auto px-4 flex items-center justify-between space-x-8">
         <Link

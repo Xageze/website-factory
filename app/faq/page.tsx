@@ -90,7 +90,7 @@ const Page: React.FC = () => {
       <div className="w-full border border-gray-200" />
 
       {/* FAQs List */}
-      <div className="w-full grid md:grid-cols-2 gap-8">
+      <div className="w-full columns-1 lg:columns-2 sm:gap-20 space-y-4 sm:space-y-10">
         {data.faqs.map((faq, index) => (
           <FaqCard
             key={index}

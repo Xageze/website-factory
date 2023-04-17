@@ -25,12 +25,12 @@ export const FaqCard: React.FC<Props> = ({
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="w-full p-5 flex flex-col-reverse sm:flex-row justify-between">
+                <Disclosure.Button className="w-full p-5 flex flex-col-reverse lg:flex-row justify-between">
                   <CustomHtml.H4 className="text-left text-xl font-bold pr-4">
                     {question}
                   </CustomHtml.H4>
-                  <div className="mb-5 sm:mb-0 flex items-center space-x-4">
-                    {category.text !== "None" && (
+                  <div className="w-full mb-5 lg:mb-0 flex items-center justify-between lg:justify-end space-x-4">
+                    {category.text !== "None" ? (
                       <span
                         className={clsx(
                           "px-5 py-1 font-semibold rounded-lg",
@@ -39,6 +39,8 @@ export const FaqCard: React.FC<Props> = ({
                       >
                         {category.text}
                       </span>
+                    ) : (
+                      <div />
                     )}
                     <div
                       className={clsx(

@@ -1,6 +1,6 @@
+import "./globals.css";
 import { Footer } from "@modules/ui/components/Footer";
 import { Header } from "@modules/ui/components/Header";
-import "./globals.css";
 
 export const metadata = {
   title: "Create Next App",
@@ -27,6 +27,7 @@ export default function RootLayout({
                 { text: "FAQ", href: "/faq" },
                 { text: "Shibas", href: "/shibas" },
               ]}
+              currentRoute={"/"}
             />
             {children}
           </div>

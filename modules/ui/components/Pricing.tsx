@@ -17,8 +17,6 @@ type Props = {
 };
 
 export const Pricing: React.FC<Props> = ({ title, cards }) => {
-  const [activeCard, setActiveCard] = useState<number>();
-
   return (
     <div>
       <CustomHtml.H2 className="pb-20 text-4xl font-bold text-center">
@@ -29,9 +27,6 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
           return (
             <div
               key={index}
-              onClick={() => {
-                setActiveCard(index);
-              }}
               className={clsx(
                 "text-center bg-white rounded-lg shadow-sm",
                 "hover:cursor-pointer hover:scale-105 transition-all duration-300",
@@ -41,8 +36,7 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
               <div>
                 <CustomHtml.H4
                   className={clsx(
-                    "text-3xl sm:text-4xl py-8 font-bold border-b-4",
-                    activeCard === index && "border-blue-500"
+                    "text-3xl sm:text-4xl py-8 font-bold border-b-4"
                   )}
                 >
                   {card.plan}

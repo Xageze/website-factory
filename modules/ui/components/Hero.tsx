@@ -35,6 +35,9 @@ export const Hero: React.FC<Props> = ({
             src={backgroundImage?.url}
             alt={backgroundImage?.alt}
             fill
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 85vw,
+            75vw"
             className="object-cover"
           />
           <div
@@ -67,6 +70,9 @@ export const Hero: React.FC<Props> = ({
               src={sideImage?.url}
               alt={sideImage?.alt}
               fill
+              sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
               className="object-cover"
             />
           </div>

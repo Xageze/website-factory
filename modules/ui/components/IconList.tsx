@@ -38,7 +38,11 @@ export const IconList: React.FC<Props> = ({
                     src={item.url}
                     alt={item.alt}
                     fill
-                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+                    draggable={false}
+                    className="object-contain select-none"
                   />
                 </div>
               );
@@ -54,7 +58,11 @@ export const IconList: React.FC<Props> = ({
                     src={item.url}
                     alt={item.alt}
                     fill
-                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+                    draggable={false}
+                    className="object-contain select-none"
                   />
                 </div>
               );
