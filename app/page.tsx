@@ -44,10 +44,33 @@ export default function Home() {
           image={{
             url: "/card_1.jpg",
             alt: "desktop with a laptop",
+            side: "above",
           }}
           title={"Noteworthy technology acquisitions 2021"}
           text={
-            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          }
+        />
+        <Card
+          image={{
+            url: "/card_1.jpg",
+            alt: "desktop with a laptop",
+            side: "left",
+          }}
+          title={"Noteworthy technology acquisitions 2021"}
+          text={
+            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order. Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+          }
+        />
+        <Card
+          image={{
+            url: "/card_1.jpg",
+            alt: "desktop with a laptop",
+            side: "right",
+          }}
+          title={"Noteworthy technology acquisitions 2021"}
+          text={
+            "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
           }
         />
         <ImageAndText

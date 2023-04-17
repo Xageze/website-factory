@@ -24,7 +24,7 @@ export const Pricing: React.FC<Props> = ({ title, cards }) => {
       <CustomHtml.H2 className="pb-20 text-4xl font-bold text-center">
         {title}
       </CustomHtml.H2>
-      <div className=" flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-8">
         {cards.map((card, index) => {
           return (
             <div
