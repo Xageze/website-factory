@@ -22,22 +22,25 @@ export default function RootLayout({
               logoTitle={"Square"}
               links={[
                 {
+                  dropDownLink: {
+                    categoryTitle: "DropDown",
+                    subLinks: [
+                      { href: "/", text: "Comment ça marche ?" },
+                      { href: "/", text: "Site web personnel" },
+                      { href: "/", text: "calendriers & Tarifs" },
+                      { href: "/", text: "Gestion des réservations" },
+                      { href: "/", text: "Contrats de location" },
+                      { href: "/shibas", text: "Aller voir les shibas" },
+                    ],
+                  },
+                },
+                {
                   normalLink: { text: "Home Page", href: "/" },
                 },
                 {
                   normalLink: {
                     text: "Mentions légales",
                     href: "/mentions-legales",
-                  },
-                },
-                {
-                  dropDownLink: {
-                    categoryTitle: "DropDown",
-                    subLinks: [
-                      { href: "/faq", text: "Faq" },
-                      { href: "/blog", text: "Blog" },
-                      { href: "/shibas", text: "Shibas" },
-                    ],
                   },
                 },
                 { normalLink: { text: "Blog", href: "/blog" } },

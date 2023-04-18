@@ -17,7 +17,7 @@ export const MenuBurger: React.FC<Props> = ({ links }) => {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
-    <nav className="md:hidden">
+    <nav className="lg:hidden">
       <Burger opened={opened} onClick={toggle} className="mr-4" />
 
       {/* MENU BURGER */}
@@ -60,8 +60,8 @@ export const MenuBurger: React.FC<Props> = ({ links }) => {
                 (link, index) =>
                   (link.normalLink && (
                     <BurgerNormalLink
-                      onClick={toggle}
                       key={index}
+                      onClick={toggle}
                       link={link}
                     />
                   )) ||
@@ -73,7 +73,11 @@ export const MenuBurger: React.FC<Props> = ({ links }) => {
                     />
                   )) ||
                   (link.buttonLink && (
-                    <BurgerButtonLink onClick={toggle} link={link} />
+                    <BurgerButtonLink
+                      key={index}
+                      onClick={toggle}
+                      link={link}
+                    />
                   ))
               )}
             </motion.div>

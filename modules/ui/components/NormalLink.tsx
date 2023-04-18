@@ -11,7 +11,7 @@ export const NormalLink: React.FC<Props> = ({ link }) => {
     <Link
       key={link.normalLink?.text + link.normalLink?.href}
       href={link.normalLink?.href}
-      className="hover:underline"
+      className="pr-6 hover:underline whitespace-nowrap hidden lg:flex"
     >
       {link.normalLink?.text}
     </Link>

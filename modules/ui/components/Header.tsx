@@ -47,7 +47,7 @@ export const Header: React.FC<Props> & { height: number } = ({
           <div className="text-xl font-bold">{logoTitle}</div>
         </Link>
 
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="hidden sm:flex space-x-4 items-center">
           {links.map(
             (link, index) =>
               (link.normalLink && <NormalLink key={index} link={link} />) ||
