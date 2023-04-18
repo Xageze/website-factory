@@ -11,6 +11,21 @@ export type LinkType = {
   href: UrlObject | Route;
 };
 
+export type HeaderLinkType = {
+  normalLink?: {
+    text: string;
+    href: UrlObject | Route;
+  };
+  dropDownLink?: {
+    categoryTitle: string;
+    subLinks: LinkType[];
+  };
+  buttonLink?: {
+    text: string;
+    href: UrlObject | Route;
+  };
+};
+
 export type IconLink = {
   href: UrlObject | Route;
   icon: ImageType;

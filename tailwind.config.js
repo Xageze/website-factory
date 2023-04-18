@@ -11,6 +11,7 @@ module.exports = {
       'lg': '0 0 40px rgb(0 0 0 / 0.2);',
       'xl': '0 0 50px rgb(0 0 0 / 0.2);',
       '2xl': '0 0 60px rgb(0 0 0 / 0.2);',
+      'down-sm': '0 0 20px 0 rgb(0 0 0 / 0.1);',
     },
     extend: {},
   },

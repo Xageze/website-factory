@@ -13,6 +13,7 @@ type linkProps = {
   children: React.ReactNode;
   hrefLink: LinkType;
   className?: string;
+  onClick?: () => void;
 };
 
 const H1: React.FC<Props> = ({ children, className }) => {
@@ -81,16 +82,22 @@ const Button: React.FC<Props & { buttonType?: "submit" }> = ({
   );
 };
 
-const CustomLink: React.FC<linkProps> = ({ children, className, hrefLink }) => {
+const CustomLink: React.FC<linkProps> = ({
+  children,
+  className,
+  hrefLink,
+  onClick,
+}) => {
   return (
     <Link
+      href={hrefLink}
+      onClick={onClick}
       className={clsx(
         "text-white font-semibold",
         "bg-green-400 hover:bg-green-500 rounded-lg",
         "px-4 py-3 flex items-center",
         className
       )}
-      href={hrefLink}
     >
       {children}
       <Arrow />

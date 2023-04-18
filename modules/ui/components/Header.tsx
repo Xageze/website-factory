@@ -4,16 +4,16 @@ import "../../../app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-import { Burger } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { motion, AnimatePresence } from "framer-motion";
-import { ImageType, LinkType } from "@modules/miscellaneous/type";
+import { HeaderLinkType, ImageType } from "@modules/miscellaneous/type";
+import { MenuBurger } from "./MenuBurger";
+import { DropDownLink } from "./DropDownLink";
+import { NormalLink } from "./NormalLink";
+import { ButtonLink } from "./ButtonLink";
 
 type Props = {
   logo: ImageType;
   logoTitle: string;
-  links: Array<LinkType>;
-  rightLinks: Array<LinkType>;
+  links: Array<HeaderLinkType>;
   backgroundColor?: string;
 };
 
@@ -22,13 +22,10 @@ export const Header: React.FC<Props> & { height: number } = ({
   logoTitle,
   links,
   backgroundColor = "white",
-  rightLinks,
 }) => {
-  const [opened, { toggle }] = useDisclosure(false);
-
   return (
     <header
-      className="sticky top-0 text-lg font-medium shadow-sm flex items-center bg-white z-10"
+      className="sticky top-0 text-lg font-medium shadow-down-sm flex items-center bg-white z-10"
       style={{ height: Header.height, backgroundColor }}
     >
       <div className="container mx-auto px-4 flex items-center justify-between space-x-8">
@@ -51,80 +48,16 @@ export const Header: React.FC<Props> & { height: number } = ({
         </Link>
 
         <div className="hidden md:flex space-x-8 items-center">
-          {links.map((link) => (
-            <Link
-              key={link.text + link.href}
-              href={link.href}
-              className="hover:underline min-w-fit"
-            >
-              {link.text}
-            </Link>
-          ))}
-          {rightLinks.map((rightLink) => {
-            return (
-              <Link
-                key={rightLink.text + rightLink.href}
-                href={rightLink.href}
-                className="px-5 py-2 rounded-full bg-green-400 hover:bg-green-500 text-white"
-              >
-                {rightLink.text}
-              </Link>
-            );
-          })}
+          {links.map(
+            (link, index) =>
+              (link.normalLink && <NormalLink key={index} link={link} />) ||
+              (link.dropDownLink && <DropDownLink key={index} link={link} />) ||
+              (link.buttonLink && <ButtonLink key={index} link={link} />)
+          )}
         </div>
       </div>
 
-      <Burger opened={opened} onClick={toggle} className="md:hidden" />
-
-      {/* MENU BURGER */}
-      <AnimatePresence>
-        {opened && (
-          <>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{
-                width: 288,
-                transition: { duration: 0.3 },
-              }}
-              exit={{ width: 0, transition: { delay: 0.3, duration: 0.3 } }}
-              className="absolute right-0 bg-gray-100 shadow-xl flex flex-col"
-              style={{
-                height: `calc(100vh - ${Header.height}px)`,
-                top: Header.height,
-              }}
-            />
-            <motion.div
-              initial={{ opacity: 0, translateY: 20 }}
-              animate={{
-                opacity: 1,
-                translateY: 0,
-                transition: { delay: 0.4, duration: 0.4 },
-              }}
-              exit={{
-                opacity: 0,
-                translateY: 20,
-                transition: { delay: 0, duration: 0.4 },
-              }}
-              className="absolute w-72 right-0 font-bold flex flex-col"
-              style={{
-                height: `calc(100vh - ${Header.height}px)`,
-                top: Header.height,
-              }}
-            >
-              {links.map((link) => (
-                <Link
-                  key={link.text + link.href}
-                  href={link.href}
-                  onClick={toggle}
-                  className="px-6 py-2 hover:bg-gray-300"
-                >
-                  {link.text}
-                </Link>
-              ))}
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+      <MenuBurger links={links} />
     </header>
   );
 };

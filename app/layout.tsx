@@ -21,15 +21,29 @@ export default function RootLayout({
               logo={{ url: "/header-logo.png", alt: "Logo" }}
               logoTitle={"Square"}
               links={[
-                { text: "Home Page", href: "/" },
-                { text: "Mentions légales", href: "/mentions-legales" },
-                { text: "Blog", href: "/blog" },
-                { text: "FAQ", href: "/faq" },
-                { text: "Shibas", href: "/shibas" },
-              ]}
-              rightLinks={[
-                { text: "Login", href: "/login" },
-                { text: "Sign Up", href: "/signup" },
+                {
+                  normalLink: { text: "Home Page", href: "/" },
+                },
+                {
+                  normalLink: {
+                    text: "Mentions légales",
+                    href: "/mentions-legales",
+                  },
+                },
+                {
+                  dropDownLink: {
+                    categoryTitle: "DropDown",
+                    subLinks: [
+                      { href: "/faq", text: "Faq" },
+                      { href: "/blog", text: "Blog" },
+                      { href: "/shibas", text: "Shibas" },
+                    ],
+                  },
+                },
+                { normalLink: { text: "Blog", href: "/blog" } },
+                { normalLink: { text: "FAQ", href: "/faq" } },
+                { buttonLink: { text: "Login", href: "/" } },
+                { buttonLink: { text: "Sign Up", href: "/" } },
               ]}
             />
             {children}
