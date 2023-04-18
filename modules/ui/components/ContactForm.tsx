@@ -33,15 +33,7 @@ export const ContactForm: React.FC = () => {
         placeholder="Écrivez votre texte ici..."
         className="px-4 py-2 bg-gray-100 h-24"
       />
-      <button
-        type="submit"
-        className={clsx(
-          "mt-4 px-5 py-3 w-min self-center",
-          "text-white font-semibold bg-blue-500 hover:bg-blue-700 rounded-lg"
-        )}
-      >
-        Envoyer
-      </button>
+      <CustomHtml.Button buttonType="submit">Envoyer</CustomHtml.Button>
     </form>
   );
 };

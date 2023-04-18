@@ -2,7 +2,7 @@ import { LinkType } from "@modules/miscellaneous/type";
 import { Arrow } from "@modules/svgs/components/Arrow";
 import clsx from "clsx";
 import Link from "next/link";
-import React from "react";
+import React, { ButtonHTMLAttributes, HTMLInputTypeAttribute } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -63,11 +63,16 @@ const P: React.FC<Props> = ({ children, className }) => {
   return <p className={clsx("text-base sm:text-lg", className)}>{children}</p>;
 };
 
-const Button: React.FC<Props> = ({ children, className }) => {
+const Button: React.FC<Props & { buttonType?: "submit" }> = ({
+  children,
+  className,
+  buttonType,
+}) => {
   return (
     <button
+      type={buttonType}
       className={clsx(
-        "self-center px-5 py-3 rounded-lg text-white font-semibold bg-blue-500 hover:bg-blue-600",
+        "self-center px-5 py-3 rounded-lg text-white font-semibold bg-green-400 hover:bg-green-500",
         className
       )}
     >
@@ -81,7 +86,7 @@ const CustomLink: React.FC<linkProps> = ({ children, className, hrefLink }) => {
     <Link
       className={clsx(
         "text-white font-semibold",
-        "bg-blue-500 hover:bg-blue-600 rounded-lg",
+        "bg-green-400 hover:bg-green-500 rounded-lg",
         "px-4 py-3 flex items-center",
         className
       )}

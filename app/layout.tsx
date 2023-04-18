@@ -27,6 +27,10 @@ export default function RootLayout({
                 { text: "FAQ", href: "/faq" },
                 { text: "Shibas", href: "/shibas" },
               ]}
+              rightLinks={[
+                { text: "Login", href: "/login" },
+                { text: "Sign Up", href: "/signup" },
+              ]}
             />
             {children}
           </div>

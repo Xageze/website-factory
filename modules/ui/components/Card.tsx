@@ -13,10 +13,9 @@ type Props = {
 
 export const Card: React.FC<Props> = ({ image, title, text, buttonText }) => {
   return (
-    // <div className="border max-w-xs rounded-lg overflow-hidden shadow-sm">
     <div
       className={clsx(
-        "border rounded-lg overflow-hidden shadow-sm flex itmes-center",
+        "bg-white border rounded-lg overflow-hidden shadow-sm flex",
         image.side === "left" &&
           "max-w-xs sm:max-w-none flex-col sm:flex-row w-fit",
         image.side === "right" &&

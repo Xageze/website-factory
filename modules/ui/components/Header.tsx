@@ -13,6 +13,7 @@ type Props = {
   logo: ImageType;
   logoTitle: string;
   links: Array<LinkType>;
+  rightLinks: Array<LinkType>;
   backgroundColor?: string;
 };
 
@@ -21,6 +22,7 @@ export const Header: React.FC<Props> & { height: number } = ({
   logoTitle,
   links,
   backgroundColor = "white",
+  rightLinks,
 }) => {
   const [opened, { toggle }] = useDisclosure(false);
 
@@ -48,7 +50,7 @@ export const Header: React.FC<Props> & { height: number } = ({
           <div className="text-xl font-bold">{logoTitle}</div>
         </Link>
 
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 items-center">
           {links.map((link) => (
             <Link
               key={link.text + link.href}
@@ -58,9 +60,21 @@ export const Header: React.FC<Props> & { height: number } = ({
               {link.text}
             </Link>
           ))}
+          {rightLinks.map((rightLink) => {
+            return (
+              <Link
+                key={rightLink.text + rightLink.href}
+                href={rightLink.href}
+                className="px-5 py-2 rounded-full bg-green-400 hover:bg-green-500 text-white"
+              >
+                {rightLink.text}
+              </Link>
+            );
+          })}
         </div>
-        <Burger opened={opened} onClick={toggle} className="md:hidden" />
       </div>
+
+      <Burger opened={opened} onClick={toggle} className="md:hidden" />
 
       {/* MENU BURGER */}
       <AnimatePresence>
