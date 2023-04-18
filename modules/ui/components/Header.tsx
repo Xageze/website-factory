@@ -9,6 +9,7 @@ import { MenuBurger } from "./MenuBurger";
 import { DropDownLink } from "./DropDownLink";
 import { NormalLink } from "./NormalLink";
 import { ButtonLink } from "./ButtonLink";
+import Headroom from "react-headroom";
 
 type Props = {
   logo: ImageType;
@@ -24,41 +25,45 @@ export const Header: React.FC<Props> & { height: number } = ({
   backgroundColor = "white",
 }) => {
   return (
-    <header
-      className="sticky top-0 text-lg font-medium shadow-down-sm flex items-center bg-white z-10"
-      style={{ height: Header.height, backgroundColor }}
-    >
-      <div className="container mx-auto px-4 flex items-center justify-between space-x-8">
-        <Link
-          className={clsx(
-            "flex items-center space-x-8",
-            "hover:cursor-pointer hover:scale-105",
-            "transition-all ease-in-out"
-          )}
-          href={"/"}
-        >
-          <Image
-            src={logo.url}
-            alt={logo.alt}
-            height={52}
-            width={52}
-            className="object-contain object-left"
-          />
-          <div className="text-xl font-bold">{logoTitle}</div>
-        </Link>
+    <Headroom>
+      <header
+        className="sticky top-0 text-lg font-medium shadow-down-sm flex items-center bg-white z-10"
+        style={{ height: Header.height, backgroundColor }}
+      >
+        <div className="container mx-auto px-4 flex items-center justify-between space-x-8">
+          <Link
+            className={clsx(
+              "flex items-center space-x-8",
+              "hover:cursor-pointer hover:scale-105",
+              "transition-all ease-in-out"
+            )}
+            href={"/"}
+          >
+            <Image
+              src={logo.url}
+              alt={logo.alt}
+              height={52}
+              width={52}
+              className="object-contain object-left"
+            />
+            <div className="text-xl font-bold">{logoTitle}</div>
+          </Link>
 
-        <div className="hidden sm:flex space-x-4 items-center">
-          {links.map(
-            (link, index) =>
-              (link.normalLink && <NormalLink key={index} link={link} />) ||
-              (link.dropDownLink && <DropDownLink key={index} link={link} />) ||
-              (link.buttonLink && <ButtonLink key={index} link={link} />)
-          )}
+          <div className="hidden sm:flex space-x-4 items-center">
+            {links.map(
+              (link, index) =>
+                (link.normalLink && <NormalLink key={index} link={link} />) ||
+                (link.dropDownLink && (
+                  <DropDownLink key={index} link={link} />
+                )) ||
+                (link.buttonLink && <ButtonLink key={index} link={link} />)
+            )}
+          </div>
         </div>
-      </div>
 
-      <MenuBurger links={links} />
-    </header>
+        <MenuBurger links={links} />
+      </header>
+    </Headroom>
   );
 };
 
