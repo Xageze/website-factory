@@ -3,7 +3,7 @@ export async function fetchShibas() {
     "http://shibe.online/api/shibes?count=50",
     {
       // cache: "no-store",
-      next: { revalidate: 10 },
+      next: { revalidate: 1 },
     }
   );
 
