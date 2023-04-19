@@ -1,5 +1,4 @@
 import { ImageType, LinkType } from "@modules/miscellaneous/type";
-import { Arrow } from "@modules/svgs/components/Arrow";
 import Image from "next/image";
 import React from "react";
 import CustomHtml from "./CustomHtml";
