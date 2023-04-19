@@ -35,6 +35,10 @@ export default function Home() {
           alt: "Hero background",
         }}
         sideImage={{ url: "/side-image.jpg", alt: "Side image" }}
+        buttons={[
+          { href: "/blog", text: "Go to blog page" },
+          { href: "/faq", text: "Go to FAQ page" },
+        ]}
       />
       <IconList
         icon={[

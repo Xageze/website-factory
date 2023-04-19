@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { ImageType } from "@modules/miscellaneous/type";
+import { ImageType, LinkType } from "@modules/miscellaneous/type";
 import { motion } from "framer-motion";
 import { Header } from "./Header";
 import CustomHtml from "./CustomHtml";
@@ -14,6 +14,7 @@ type Props = {
   sideImage?: ImageType;
   backgroundImage?: ImageType;
   bgOpacity?: "black" | "white";
+  buttons?: Array<LinkType>;
 };
 
 export const Hero: React.FC<Props> = ({
@@ -22,6 +23,7 @@ export const Hero: React.FC<Props> = ({
   sideImage,
   backgroundImage,
   bgOpacity,
+  buttons,
 }) => {
   return (
     <div
@@ -58,9 +60,27 @@ export const Hero: React.FC<Props> = ({
         className="container mx-auto px-6 sm:px-8 flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10 space-y-10 z-0"
       >
         {/* TEXT */}
-        <div className="text-center lg:text-start space-y-4">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-4">
           <CustomHtml.H1 className="text-white">{title}</CustomHtml.H1>
           <CustomHtml.H4 className="text-white/75">{text}</CustomHtml.H4>
+          {buttons && (
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-start gap-4 sm:gap-8">
+              {buttons.map((button, index) => {
+                return (
+                  <CustomHtml.CustomLink
+                    key={index}
+                    hrefLink={button?.href}
+                    className={clsx(
+                      "px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4",
+                      "w-fit sm:text-lg lg:text-xl rounded-full"
+                    )}
+                  >
+                    {button?.text}
+                  </CustomHtml.CustomLink>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* SIDE IMAGE */}

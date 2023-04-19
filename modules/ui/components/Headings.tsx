@@ -35,7 +35,10 @@ export const Headings: React.FC<Props> = ({
         <CustomHtml.H3 className="my-6 tracking-tight">{title}</CustomHtml.H3>
         <CustomHtml.P className="mb-6 w-full sm:w-3/4">{text}</CustomHtml.P>
         {buttonLink && (
-          <CustomHtml.CustomLink hrefLink={buttonLink?.href}>
+          <CustomHtml.CustomLink
+            hrefLink={buttonLink?.href}
+            className="rounded-lg"
+          >
             {buttonLink?.text}
           </CustomHtml.CustomLink>
         )}

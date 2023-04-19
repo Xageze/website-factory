@@ -94,7 +94,7 @@ const CustomLink: React.FC<linkProps> = ({
       onClick={onClick}
       className={clsx(
         "text-white font-semibold",
-        "bg-green-400 hover:bg-green-500 rounded-lg",
+        "bg-green-400 hover:bg-green-500",
         "px-4 py-3 flex items-center",
         className
       )}
