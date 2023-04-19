@@ -2,6 +2,7 @@ import { ImageType } from "@modules/miscellaneous/type";
 import React from "react";
 import clsx from "clsx";
 import CustomHtml from "@modules/ui/components/CustomHtml";
+import { pageMarginsClasses } from "@modules/miscellaneous/pageMarginClasses";
 
 type FeatureType = {
   title?: string;
@@ -24,7 +25,7 @@ export const FeatureSection: React.FC<Props> = ({
 }) => {
   return (
     <div className={clsx("bg-slate-800", className)}>
-      <div className="container mx-auto px-3 sm:px-6 text-center text-white">
+      <div className={clsx("text-center text-white", pageMarginsClasses)}>
         {title && <CustomHtml.H3>{title}</CustomHtml.H3>}
         {text && (
           <CustomHtml.P className="text-gray-200 pt-4">{text}</CustomHtml.P>

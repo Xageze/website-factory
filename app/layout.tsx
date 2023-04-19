@@ -35,6 +35,19 @@ export default function RootLayout({
                   },
                 },
                 {
+                  dropDownLink: {
+                    categoryTitle: "DropDown2",
+                    subLinks: [
+                      { href: "/", text: "Comment ça marche ?" },
+                      { href: "/", text: "Site web personnel" },
+                      { href: "/", text: "calendriers & Tarifs" },
+                      { href: "/", text: "Gestion des réservations" },
+                      { href: "/", text: "Contrats de location" },
+                      { href: "/shibas", text: "Aller voir les shibas" },
+                    ],
+                  },
+                },
+                {
                   normalLink: { text: "Home Page", href: "/" },
                 },
                 {

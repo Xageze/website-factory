@@ -9,9 +9,16 @@ type Props = {
   title: string;
   text: string;
   buttonText: string;
+  className?: string;
 };
 
-export const Card: React.FC<Props> = ({ image, title, text, buttonText }) => {
+export const Card: React.FC<Props> = ({
+  image,
+  title,
+  text,
+  buttonText,
+  className,
+}) => {
   return (
     <div
       className={clsx(
@@ -20,7 +27,8 @@ export const Card: React.FC<Props> = ({ image, title, text, buttonText }) => {
           "max-w-xs sm:max-w-none flex-col sm:flex-row w-fit",
         image.side === "right" &&
           "max-w-xs sm:max-w-none flex-col sm:flex-row-reverse w-fit",
-        image.side === "above" && "max-w-xs flex-col"
+        image.side === "above" && "max-w-xs flex-col",
+        className
       )}
     >
       {/* Image */}

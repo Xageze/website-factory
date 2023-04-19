@@ -13,11 +13,17 @@ type Props = {
     question: string;
     answer: string;
   }>;
+  className?: string;
 };
 
-export const Faq: React.FC<Props> = ({ title, text, faqList }) => {
+export const Faq: React.FC<Props> = ({ title, text, faqList, className }) => {
   return (
-    <div className="flex flex-col sm:flex-row text-center sm:text-left">
+    <div
+      className={clsx(
+        "flex flex-col sm:flex-row text-center sm:text-left",
+        className
+      )}
+    >
       <div className="flex-[2] space-y-5 pb-12">
         <CustomHtml.H2>{title}</CustomHtml.H2>
         <CustomHtml.P>{text}</CustomHtml.P>

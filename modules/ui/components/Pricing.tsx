@@ -14,11 +14,12 @@ type CardType = {
 type Props = {
   title: string;
   cards: Array<CardType>;
+  className?: string;
 };
 
-export const Pricing: React.FC<Props> = ({ title, cards }) => {
+export const Pricing: React.FC<Props> = ({ title, cards, className }) => {
   return (
-    <div>
+    <div className={className}>
       <CustomHtml.H2 className="pb-20 text-4xl font-bold text-center">
         {title}
       </CustomHtml.H2>

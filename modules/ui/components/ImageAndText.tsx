@@ -9,6 +9,7 @@ type Props = {
   title: string;
   text: string;
   imagePosition?: "left" | "right";
+  className?: string;
 };
 
 export const ImageAndText: React.FC<Props> = ({
@@ -16,9 +17,15 @@ export const ImageAndText: React.FC<Props> = ({
   title,
   text,
   imagePosition,
+  className,
 }) => {
   return (
-    <div className="relative flex flex-col lg:flex-row items-center justify-center">
+    <div
+      className={clsx(
+        "relative flex flex-col lg:flex-row items-center justify-center",
+        className
+      )}
+    >
       {/* Title + Text */}
       <div
         className={

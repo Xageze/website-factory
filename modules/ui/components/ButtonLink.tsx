@@ -1,6 +1,6 @@
-import { HeaderLinkType } from "@modules/miscellaneous/type";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { HeaderLinkType } from "@modules/miscellaneous/type";
 
 type Props = {
   link: HeaderLinkType;
