@@ -31,7 +31,7 @@ export const DropDownLink: React.FC<Props> = ({ link }) => {
         <div
           className={clsx(
             "bg-white rounded-md border border-gray-300",
-            "py-2 flex flex-col"
+            "py-2 shadow-sm flex flex-col"
           )}
         >
           {link.dropDownLink?.subLinks.map((link, index) => (

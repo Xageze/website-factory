@@ -22,32 +22,24 @@ export const ImageAndText: React.FC<Props> = ({
   return (
     <div
       className={clsx(
-        "relative flex flex-col lg:flex-row items-center justify-center",
+        "relative flex flex-col items-center justify-center gap-6",
+        imagePosition === "right" ? "lg:flex-row" : "lg:flex-row-reverse",
         className
       )}
     >
       {/* Title + Text */}
-      <div
-        className={
-          imagePosition === "right" ? "mr-0 lg:mr-[53%]" : "ml-0 lg:ml-[53%]"
-        }
-      >
+      <div className="flex-1">
         <CustomHtml.H2 className="">{title}</CustomHtml.H2>
         <CustomHtml.P className="pt-4 sm:pt-10">{text}</CustomHtml.P>
       </div>
       {/* Image */}
-      <div
-        className={clsx(
-          "static lg:absolute pt-8",
-          imagePosition === "right" ? "left-1/2" : "right-1/2"
-        )}
-      >
+      <div className={"flex-1"}>
         <Image
           src={image.url}
           alt={image.alt}
-          height={400}
+          height={1000}
           width={1000}
-          className="max-h-[400px] object-contain"
+          className="object-cover"
         />
       </div>
     </div>
