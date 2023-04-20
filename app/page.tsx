@@ -13,14 +13,8 @@ import { SslIcon } from "@modules/svgs/components/SslIcon";
 import { ZapIcon } from "@modules/svgs/components/ZapIcon";
 import { SeoIcon } from "@modules/svgs/components/SeoIcon";
 import { ResponsiveIcon } from "@modules/svgs/components/ResponsiveIcon";
-import type { Metadata } from "next";
 import { pageMarginsClasses } from "@modules/miscellaneous/pageMarginClasses";
 import clsx from "clsx";
-
-export const metadata: Metadata = {
-  title: "Accueil",
-  description: "Bienvenue sur mon site de test",
-};
 
 export default function Home() {
   return (
