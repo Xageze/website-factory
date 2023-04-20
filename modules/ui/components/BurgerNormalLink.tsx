@@ -13,7 +13,7 @@ export const BurgerNormalLink: React.FC<Props> = ({ link, onClick }) => {
       key={link.normalLink?.text + link.normalLink?.href}
       href={link.normalLink?.href}
       onClick={onClick}
-      className="px-6 py-2 border-b border-gray-300 hover:bg-gray-200 transition-colors"
+      className="px-6 py-2 border-t border-gray-300 hover:bg-gray-200 transition-colors"
     >
       {link.normalLink?.text}
     </Link>

@@ -18,7 +18,7 @@ export const BurgerDropDownLink: React.FC<Props> = ({ link, onClick }) => {
   return (
     <div className="flex flex-col">
       <span
-        className="px-6 py-2 border-b border-gray-300 hover:cursor-pointer hover:bg-gray-200 transition-colors"
+        className="px-6 py-2 border-t border-gray-300 hover:cursor-pointer hover:bg-gray-200 transition-colors"
         onClick={toggle}
       >
         <div className="flex justify-between items-center">

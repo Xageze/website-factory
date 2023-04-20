@@ -4,12 +4,12 @@ import "../../../app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
+import Headroom from "react-headroom";
 import { HeaderLinkType, ImageType } from "@modules/miscellaneous/type";
 import { MenuBurger } from "./MenuBurger";
 import { DropDownLink } from "./DropDownLink";
 import { NormalLink } from "./NormalLink";
 import { ButtonLink } from "./ButtonLink";
-import Headroom from "react-headroom";
 import { pageMarginsClasses } from "@modules/miscellaneous/pageMarginClasses";
 
 type Props = {

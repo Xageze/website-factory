@@ -35,9 +35,6 @@ export default function RootLayout({
                   },
                 },
                 {
-                  normalLink: { text: "Home Page", href: "/" },
-                },
-                {
                   normalLink: {
                     text: "Mentions légales",
                     href: "/mentions-legales",
